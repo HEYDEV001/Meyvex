@@ -6,6 +6,34 @@ import SocialCards from "@/components/ui/card-fan-carousel";
 import HowItWorks from "@/components/ui/how-it-works";
 import { AnimatedTeamSection } from "@/components/ui/team-section";
 import FooterSection5 from "@/components/ui/footer-section-5";
+import { CircularGallery } from "@/components/ui/circular-gallery-2";
+
+const resultItems = [
+  {
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+    text: "2.5x User Growth",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+    text: "40% Faster Launch",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=800&auto=format&fit=crop",
+    text: "3x Revenue Increase",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
+    text: "98% Client Retention",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
+    text: "60% Cost Reduction",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop",
+    text: "12+ Awards Won",
+  },
+];
 
 const teamMembers = [
   {
@@ -265,6 +293,20 @@ export default function Home() {
 
       <section className="h-screen pt-2 pb-20 w-full">
         <LayoutGrid cards={services} />
+      </section>
+
+      <section className="w-full px-4 py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+            Results That Speak
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg">
+            Real outcomes from real partnerships, drag to explore.
+          </p>
+        </div>
+        <div className="relative mt-12 h-[500px] w-full">
+          <CircularGallery items={resultItems} bend={3} borderRadius={0.05} scrollEase={0.02} />
+        </div>
       </section>
 
       <section className="w-full py-20">
