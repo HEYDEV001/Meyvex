@@ -1,18 +1,9 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export default function FluidFlowGrid() {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
-    const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        setIsDarkMode(mediaQuery.matches);
-        const handler = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
-        mediaQuery.addEventListener('change', handler);
-        return () => mediaQuery.removeEventListener('change', handler);
-    }, []);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -62,9 +53,9 @@ export default function FluidFlowGrid() {
             mouse.x += (mouse.targetX - mouse.x) * 0.08;
             mouse.y += (mouse.targetY - mouse.y) * 0.08;
 
-            const bgColor = isDarkMode ? '#080d1a' : '#f0f7ff';
-            const lineBaseColor = isDarkMode ? '59, 130, 246' : '30, 64, 175'; // Neutral Slate-Blue
-            const accentBlue = isDarkMode ? '147, 197, 253' : '29, 78, 216';
+            const bgColor = '#f0f7ff';
+            const lineBaseColor = '30, 64, 175'; // Neutral Slate-Blue
+            const accentBlue = '29, 78, 216';
 
             ctx.fillStyle = bgColor;
             ctx.fillRect(0, 0, width, height);
@@ -126,10 +117,10 @@ export default function FluidFlowGrid() {
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('mouseleave', handleMouseLeave);
         };
-    }, [isDarkMode]);
+    }, []);
 
     return (
-        <div className="relative w-full h-screen overflow-hidden select-none bg-slate-950">
+        <div className="relative w-full h-screen overflow-hidden select-none bg-[#f0f7ff]">
             <canvas ref={canvasRef} className="absolute inset-0 block cursor-default" />
 
             <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4 pointer-events-none mix-blend-difference text-white">
