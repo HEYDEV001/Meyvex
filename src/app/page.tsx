@@ -125,7 +125,7 @@ export default function Home() {
     <div className="flex flex-col flex-1">
       <FluidFlowGrid />
 
-      <section className="relative mx-auto w-full max-w-3xl px-4 py-20">
+      <section className="relative mx-auto w-full max-w-3xl px-4 pt-20 pb-16">
         <h2 className="mb-5 text-center font-medium text-foreground text-xl tracking-tight md:text-3xl">
           <span className="text-muted-foreground">Trusted by experts.</span>
           <br />
@@ -138,7 +138,16 @@ export default function Home() {
         <div className="mt-5 h-px bg-border [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
       </section>
 
-      <section className="h-screen py-20 w-full">
+      <section className="w-full px-4 pt-16 pb-6 text-center font-sans">
+        <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-6xl">
+          From Idea to Scale
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg">
+          Strategy, creativity, and performance all working towards growth.
+        </p>
+      </section>
+
+      <section className="h-screen pt-2 pb-20 w-full">
         <LayoutGrid cards={services} />
       </section>
     </div>
