@@ -243,7 +243,13 @@ export default function Home() {
 
       <SocialCards cards={reelCards} />
 
-      <HowItWorks />
+      <section className="w-full px-4 pt-24 text-center font-sans">
+        <h2 className="text-5xl font-bold tracking-tight text-foreground md:text-7xl">
+          How It Works ?
+        </h2>
+      </section>
+
+      <HowItWorks className="mt-8" />
     </div>
   );
 }
