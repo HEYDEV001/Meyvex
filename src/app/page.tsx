@@ -205,10 +205,10 @@ export default function Home() {
         <LayoutGrid cards={services} />
       </section>
 
-      <section className="w-full px-4 py-20">
+      <section className="w-full py-20">
         <ImageStreamHero
           images={streamImages}
-          className="h-[560px] w-full rounded-lg border border-border bg-background"
+          className="h-[560px] w-full bg-background"
         >
           <div className="relative z-10 flex h-full flex-col items-center justify-between py-12 text-center">
             <div className="px-6">
