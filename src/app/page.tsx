@@ -5,6 +5,7 @@ import { ImageStreamHero } from "@/components/ui/image-stream-hero";
 import SocialCards from "@/components/ui/card-fan-carousel";
 import HowItWorks from "@/components/ui/how-it-works";
 import { AnimatedTeamSection } from "@/components/ui/team-section";
+import FooterSection5 from "@/components/ui/footer-section-5";
 
 const teamMembers = [
   {
@@ -302,6 +303,8 @@ export default function Home() {
         description="At TopOpti, we believe in forging strong partnerships build on integrity and honesty. Our mission is to drive innovation and ensure our clients success through dedicated service and creative solutions."
         members={teamMembers}
       />
+
+      <FooterSection5 />
     </div>
   );
 }
