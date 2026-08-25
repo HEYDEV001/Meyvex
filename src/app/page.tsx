@@ -3,6 +3,7 @@ import { LogoCloud } from "@/components/ui/logo-cloud-3";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import { ImageStreamHero } from "@/components/ui/image-stream-hero";
 import SocialCards from "@/components/ui/card-fan-carousel";
+import HowItWorks from "@/components/ui/how-it-works";
 
 const reelCards = [
   { imgUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=700&fit=crop", alt: "Mountain landscape" },
@@ -241,6 +242,8 @@ export default function Home() {
       </section>
 
       <SocialCards cards={reelCards} />
+
+      <HowItWorks />
     </div>
   );
 }
