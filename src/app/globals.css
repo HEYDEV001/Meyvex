@@ -128,3 +128,58 @@
     @apply font-sans;
   }
 }
+
+/* Sizing for the card-fan-carousel component (src/components/ui/card-fan-carousel.tsx).
+   Heights match the breakpoints its own getHeightMultiplier() function assumes;
+   widths keep the ~4:7 card aspect ratio used by its demo images. */
+.fan-layout {
+  height: 22rem;
+}
+.fan-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12.5rem;
+  height: 22rem;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  will-change: transform;
+}
+@media (min-width: 480px) {
+  .fan-layout {
+    height: 26rem;
+  }
+  .fan-card {
+    width: 14.75rem;
+    height: 26rem;
+  }
+}
+@media (min-width: 640px) {
+  .fan-layout {
+    height: 28rem;
+  }
+  .fan-card {
+    width: 16rem;
+    height: 28rem;
+  }
+}
+@media (min-width: 768px) {
+  .fan-layout {
+    height: 34rem;
+  }
+  .fan-card {
+    width: 19.5rem;
+    height: 34rem;
+  }
+}
+@media (min-width: 1024px) {
+  .fan-layout {
+    height: 38rem;
+  }
+  .fan-card {
+    width: 21.75rem;
+    height: 38rem;
+  }
+}
