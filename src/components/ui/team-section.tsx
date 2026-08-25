@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils"; // Assuming you have a `cn` utility for classnames
 
@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils"; // Assuming you have a `cn` utility for classn
 interface TeamMember {
   name: string;
   image: string;
+  role?: string;
+  bio?: string;
 }
 
 // Define the props for the component
@@ -43,12 +45,22 @@ const AnimatedTeamSection = React.forwardRef<
     triggerOnce: true,
     threshold: 0.2,
   });
+  const [selected, setSelected] = React.useState<number | null>(null);
 
   React.useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
   }, [controls, inView]);
+
+  React.useEffect(() => {
+    if (selected === null) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelected(null);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [selected]);
 
   // Animation for the container to stagger children
   const containerVariants = {
@@ -104,9 +116,12 @@ const AnimatedTeamSection = React.forwardRef<
           animate={controls}
         >
           {members.map((member, index) => (
-            <motion.div
+            <motion.button
+              type="button"
               key={index}
-              className="absolute w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-xl overflow-hidden shadow-lg border-2 border-background"
+              onClick={() => setSelected(index)}
+              aria-label={`View info about ${member.name}`}
+              className="absolute w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-xl overflow-hidden shadow-lg border-2 border-background cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-ring"
               custom={index} // Pass index to variants for calculation
               variants={itemVariants}
               // Set initial zIndex based on distance from center
@@ -122,10 +137,68 @@ const AnimatedTeamSection = React.forwardRef<
                 alt={member.name}
                 className="w-full h-full object-cover"
               />
-            </motion.div>
+            </motion.button>
           ))}
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {selected !== null && (
+          <React.Fragment key="team-overlay">
+            {/* Outside-click layer, same scheme as the Service Grid's backdrop */}
+            <motion.div
+              className="fixed inset-0 left-0 top-0 z-40 h-full w-full bg-black"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.3 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelected(null)}
+            />
+
+            <motion.div
+              role="dialog"
+              aria-modal="true"
+              className="fixed inset-0 z-50 m-auto flex h-1/3 w-4/5 flex-col items-center justify-center overflow-hidden rounded-lg md:w-1/3"
+            >
+              {/* Bottom-aligned scrim + text, matching the Service Grid's SelectedCard */}
+              <div className="relative z-[60] flex h-full w-full flex-col justify-end rounded-lg bg-transparent shadow-2xl">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.6 }}
+                  className="absolute inset-0 z-10 h-full w-full bg-black"
+                />
+                <motion.div
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 100 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="relative z-[70] px-8 pb-4"
+                >
+                  <p className="font-bold text-white md:text-4xl text-xl">
+                    {members[selected].name}
+                  </p>
+                  {members[selected].role && (
+                    <p className="font-normal text-base text-white">
+                      {members[selected].role}
+                    </p>
+                  )}
+                  {members[selected].bio && (
+                    <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+                      {members[selected].bio}
+                    </p>
+                  )}
+                </motion.div>
+              </div>
+
+              {/* Background image, full card */}
+              <img
+                src={members[selected].image.replace(/w=\d+/, "w=800")}
+                alt={members[selected].name}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </motion.div>
+          </React.Fragment>
+        )}
+      </AnimatePresence>
     </section>
   );
 });

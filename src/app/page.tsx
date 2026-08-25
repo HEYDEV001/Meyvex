@@ -9,30 +9,44 @@ import { AnimatedTeamSection } from "@/components/ui/team-section";
 const teamMembers = [
   {
     name: "Johnathan Doe",
+    role: "Founder & CEO",
+    bio: "Sets the studio's direction and leads client partnerships from first pitch to final launch.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
   },
   {
     name: "Jane Smith",
+    role: "Creative Director",
+    bio: "Shapes the visual language behind every brand we touch, from concept to final polish.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop",
   },
   {
     name: "Peter Jones",
+    role: "Lead Developer",
+    bio: "Turns designs into fast, reliable products, with a soft spot for clean, maintainable code.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop",
   },
   {
     name: "Sarah Williams",
+    role: "Product Designer",
+    bio: "Designs interfaces that feel obvious in hindsight, grounded in real user research.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop",
   },
   {
     name: "Michael Brown",
+    role: "Marketing Lead",
+    bio: "Plans the campaigns that get our clients' work seen by the right people, at the right time.",
     image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&auto=format&fit=crop",
   },
   {
     name: "Emily Davis",
+    role: "Brand Strategist",
+    bio: "Digs into positioning and story so every brand we build stands for something clear.",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop",
   },
   {
     name: "David Garcia",
+    role: "Growth Engineer",
+    bio: "Builds the analytics and experiments that turn traffic into measurable growth.",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop",
   },
 ];
