@@ -35,13 +35,13 @@ export function MorphingDialog() {
   };
 
   return (
-    <div>
+    <div className="w-full">
       <LayoutGroup>
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-2 md:gap-6 lg:gap-10">
+        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
             {ITEMS.map((item, index) => (
               <motion.button
-                className={`relative group flex flex-col cursor-pointer bg-muted hover:bg-muted/80 transition-colors w-full h-64 lg:h-80 rounded-2xl focus-visible:outline focus-visible:outline-ring focus-visible:ring-4 focus-visible:ring-ring/10 ${
-                  index < 3 ? "md:col-span-2" : "md:col-span-3"
+                className={`relative group overflow-hidden cursor-pointer bg-muted hover:bg-muted/80 transition-colors w-full h-64 lg:h-80 rounded-2xl focus-visible:outline focus-visible:outline-ring focus-visible:ring-4 focus-visible:ring-ring/10 ${
+                  index === 3 ? "md:col-span-2" : "md:col-span-1"
                 }`}
                 key={item.id}
                 layoutId={`card-container-${item.id}`}
@@ -52,30 +52,28 @@ export function MorphingDialog() {
                     activeItem?.id === item.id && isOpen ? "none" : "auto",
                 }}
               >
-                <div className="relative h-48 w-full overflow-hidden rounded-2xl rounded-b-none">
-                  <motion.div
-                    className="w-full h-full"
-                    layoutId={`image-container-${item.id}`}
-                  >
-                    <img
-                      alt={item.title}
-                      className="h-full w-full object-cover dark:brightness-20 dark:grayscale-25"
-                      height={500}
-                      src={item.image}
-                      width={500}
-                    />
-                  </motion.div>
-                </div>
-                <div className="flex flex-1 p-4 justify-between items-center rounded-2xl rounded-t-none">
+                <motion.div
+                  className="absolute inset-0 h-full w-full"
+                  layoutId={`image-container-${item.id}`}
+                >
+                  <img
+                    alt={item.title}
+                    className="h-full w-full object-cover dark:brightness-20 dark:grayscale-25"
+                    height={500}
+                    src={item.image}
+                    width={500}
+                  />
+                </motion.div>
+                <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-4 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
                   <motion.h3
-                    className="text-lg font-semibold"
+                    className="text-lg font-semibold text-white"
                     layoutId={`title-${item.id}`}
                     transition={{ duration: 0.2 }}
                   >
                     {item.title}
                   </motion.h3>
 
-                  <PlusIcon className="group-hover:text-foreground text-muted-foreground transition-all" />
+                  <PlusIcon className="text-white/80 transition-all group-hover:text-white" />
                 </div>
               </motion.button>
             ))}
