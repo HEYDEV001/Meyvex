@@ -6,11 +6,20 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import FooterSection5 from "@/components/ui/footer-section-5";
 import { Component as VintageKeyboard } from "@/components/ui/vintage-keyboard";
+import Link from "next/link";
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col flex-1">
       <main className="relative flex size-full w-full flex-col items-center justify-start gap-10 px-4 pt-16 pb-0">
+        <Link href="/" className="absolute top-6 left-6 z-20 md:top-8 md:left-8">
+          <img
+            src="/logo.png"
+            alt="Meyvex"
+            className="h-9 w-auto md:h-11"
+          />
+        </Link>
+
         <h1 className="text-center text-4xl font-bold tracking-tight text-foreground md:text-6xl">
           Don&apos;t Hesitate To Connect
         </h1>
@@ -22,17 +31,17 @@ export default function ContactPage() {
               {
                 icon: MailIcon,
                 label: "Email",
-                value: "contact@meyvex.com",
+                value: "hello@meyvex.com",
               },
               {
                 icon: PhoneIcon,
                 label: "Phone",
-                value: "+1 (555) 012-3456",
+                value: "+91 8819964315",
               },
               {
                 icon: MapPinIcon,
                 label: "Address",
-                value: "San Francisco, CA",
+                value: "306, HQ City Walk, Scheme No.54, Vijaynagar, Indore, 452010",
                 className: "col-span-2",
               },
             ]}

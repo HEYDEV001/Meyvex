@@ -124,11 +124,13 @@ export default function FluidFlowGrid() {
         <div className="relative w-full h-screen overflow-hidden select-none bg-[#f0f7ff]">
             <canvas ref={canvasRef} className="absolute inset-0 block cursor-default" />
 
-            <img
-                src="/logo.png"
-                alt="Meyvex"
-                className="absolute top-6 left-6 z-20 h-9 w-auto md:top-8 md:left-8 md:h-11"
-            />
+            <Link href="/" className="absolute top-6 left-6 z-20 md:top-8 md:left-8">
+                <img
+                    src="/logo.png"
+                    alt="Meyvex"
+                    className="h-9 w-auto md:h-11"
+                />
+            </Link>
 
             <Link
                 href="/contact"
