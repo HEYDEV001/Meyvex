@@ -54,7 +54,7 @@ export default function FluidFlowGrid() {
             mouse.x += (mouse.targetX - mouse.x) * 0.08;
             mouse.y += (mouse.targetY - mouse.y) * 0.08;
 
-            const bgColor = '#f0f7ff';
+            const bgColor = '#ffffff';
             const lineBaseColor = '30, 64, 175'; // Neutral Slate-Blue
             const accentBlue = '29, 78, 216';
 
@@ -121,7 +121,7 @@ export default function FluidFlowGrid() {
     }, []);
 
     return (
-        <div className="relative w-full h-screen overflow-hidden select-none bg-[#f0f7ff]">
+        <div className="relative w-full h-screen overflow-hidden select-none bg-white">
             <canvas ref={canvasRef} className="absolute inset-0 block cursor-default" />
 
             <Link href="/" className="absolute top-6 left-6 z-20 md:top-8 md:left-8">

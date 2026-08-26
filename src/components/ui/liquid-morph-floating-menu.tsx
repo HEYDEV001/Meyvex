@@ -12,6 +12,10 @@ interface MenuItem {
 
 interface FloatingMenuProps {
   items?: MenuItem[];
+  /** Controlled open state. If omitted, the menu manages its own open/closed state. */
+  open?: boolean;
+  /** Called whenever the menu wants to open or close (click, outside click, item selection). */
+  onOpenChange?: (open: boolean) => void;
 }
 
 function MenuButton({
@@ -109,8 +113,17 @@ function MenuButton({
   );
 }
 
-export default function FloatingMenu({ items }: FloatingMenuProps) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function FloatingMenu({ items, open, onOpenChange }: FloatingMenuProps) {
+  const [internalOpen, setInternalOpen] = useState(false);
+  const isControlled = open !== undefined;
+  const isOpen = isControlled ? open : internalOpen;
+  const setIsOpen = useCallback(
+    (value: boolean) => {
+      if (!isControlled) setInternalOpen(value);
+      onOpenChange?.(value);
+    },
+    [isControlled, onOpenChange],
+  );
   const containerRef = useRef<HTMLDivElement>(null);
 
   const menuItems: MenuItem[] = items ?? [
@@ -129,7 +142,7 @@ export default function FloatingMenu({ items }: FloatingMenuProps) {
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
-  }, [isOpen]);
+  }, [isOpen, setIsOpen]);
 
   return (
     <motion.div
@@ -209,10 +222,11 @@ export default function FloatingMenu({ items }: FloatingMenuProps) {
             <MenuButton
               key={item.label}
               label={item.label}
-              onClick={() => {
-                setIsOpen(false);
-                item.onClick?.();
-              }}
+              onClick={
+                item.onClick
+                  ? item.onClick
+                  : () => setIsOpen(false)
+              }
               isOpen={isOpen}
               index={idx}
             />
