@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 export default function FluidFlowGrid() {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -129,13 +130,13 @@ export default function FluidFlowGrid() {
                 className="absolute top-6 left-6 z-20 h-9 w-auto md:top-8 md:left-8 md:h-11"
             />
 
-            <a
-                href="#contact"
+            <Link
+                href="/contact"
                 className="absolute top-6 right-6 z-20 rounded-full bg-[#FFE862] px-5 py-2 text-sm font-medium uppercase tracking-tight text-[#242424] transition-transform hover:scale-105 md:top-8 md:right-8"
                 style={{ letterSpacing: "-0.02em" }}
             >
                 Contact
-            </a>
+            </Link>
 
             <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4 pointer-events-none mix-blend-difference text-white">
                 <span className="font-mono text-xs tracking-widest uppercase mb-3 text-blue-400">
