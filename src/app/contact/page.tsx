@@ -5,11 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import FooterSection5 from "@/components/ui/footer-section-5";
+import { Component as VintageKeyboard } from "@/components/ui/vintage-keyboard";
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col flex-1">
-      <main className="relative flex size-full min-h-screen w-full items-center justify-center p-4">
+      <main className="relative flex size-full w-full flex-col items-center justify-start gap-10 px-4 pt-16 pb-4">
+        <h1 className="text-center text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+          Don&apos;t Hesitate To Connect
+        </h1>
         <div className="mx-auto max-w-5xl">
           <ContactCard
             title="Get in touch"
@@ -57,6 +61,10 @@ export default function ContactPage() {
           </ContactCard>
         </div>
       </main>
+
+      <div className="contact-keyboard">
+        <VintageKeyboard respondWhileTyping />
+      </div>
 
       <FooterSection5 />
     </div>

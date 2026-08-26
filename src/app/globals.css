@@ -184,3 +184,9 @@
     height: 38rem;
   }
 }
+
+/* Contact page: let the vintage keyboard (src/components/ui/vintage-keyboard.tsx)
+   sit close under the form instead of forcing its own full viewport height. */
+.contact-keyboard .kb-viewport {
+  min-height: auto;
+}
