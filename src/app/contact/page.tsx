@@ -10,7 +10,7 @@ import { Component as VintageKeyboard } from "@/components/ui/vintage-keyboard";
 export default function ContactPage() {
   return (
     <div className="flex flex-col flex-1">
-      <main className="relative flex size-full w-full flex-col items-center justify-start gap-10 px-4 pt-16 pb-4">
+      <main className="relative flex size-full w-full flex-col items-center justify-start gap-10 px-4 pt-16 pb-0">
         <h1 className="text-center text-4xl font-bold tracking-tight text-foreground md:text-6xl">
           Don&apos;t Hesitate To Connect
         </h1>
@@ -62,7 +62,7 @@ export default function ContactPage() {
         </div>
       </main>
 
-      <div className="contact-keyboard">
+      <div className="contact-keyboard -mt-10">
         <VintageKeyboard respondWhileTyping />
       </div>
 

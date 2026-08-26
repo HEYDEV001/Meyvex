@@ -186,7 +186,9 @@
 }
 
 /* Contact page: let the vintage keyboard (src/components/ui/vintage-keyboard.tsx)
-   sit close under the form instead of forcing its own full viewport height. */
+   sit close under the form instead of forcing its own full viewport height,
+   and use a white background instead of its default off-white (#FAFAFA). */
 .contact-keyboard .kb-viewport {
   min-height: auto;
+  background-color: #fff;
 }
