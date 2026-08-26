@@ -160,7 +160,6 @@ export default function FloatingMenu({ items }: FloatingMenuProps) {
         transition={{
           duration: 0.8,
           ease,
-          height: { duration: isOpen ? 0.8 : 0.15 },
           scale: { duration: 0.25, ease },
         }}
       >
@@ -210,7 +209,10 @@ export default function FloatingMenu({ items }: FloatingMenuProps) {
             <MenuButton
               key={item.label}
               label={item.label}
-              onClick={item.onClick}
+              onClick={() => {
+                setIsOpen(false);
+                item.onClick?.();
+              }}
               isOpen={isOpen}
               index={idx}
             />
