@@ -7,7 +7,7 @@ export default function SiteNav() {
   const router = useRouter();
 
   const navItems = [
-    { label: "Services" },
+    { label: "Services", onClick: () => router.push("/services") },
     { label: "About" },
     { label: "Portfolio" },
     { label: "Contact", onClick: () => router.push("/contact") },
