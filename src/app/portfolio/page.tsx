@@ -3,6 +3,29 @@
 import { useState } from "react";
 import Link from "next/link";
 import FooterSection5 from "@/components/ui/footer-section-5";
+import { Gallery, GalleryGrid, GalleryImage } from "@/components/ui/shared-element-gallery";
+
+const PORTFOLIO_IMAGES = [
+  { id: "img-1", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/215f11bd-8f46-486d-8b18-377cf347096f_3840w.webp" },
+  { id: "img-2", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/edaf8dff-6ac4-4fed-b5ff-f41e6863a090_3840w.jpg" },
+  { id: "img-3", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1ab0a4be-b66e-441b-9576-a9d5ac06f8fb_3840w.jpg" },
+  { id: "img-4", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/32ecf28d-1c1d-4769-9096-c1094771e78c_3840w.webp" },
+  { id: "img-5", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1e5d812f-98e8-460c-ab63-780281a96167_3840w.jpg" },
+  { id: "img-6", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5b2eae1d-50c9-4fc6-bc0b-6e04ab1507b1_3840w.webp" },
+  { id: "img-7", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/765e26b6-040b-48cb-96df-db0ea0f7f300_3840w.jpg" },
+  { id: "img-8", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/00d83233-ec00-4110-bf1d-95338af5875e_3840w.jpg" },
+];
+
+const PORTFOLIO_REELS = [
+  { id: "reel-1", src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=1050&fit=crop" },
+  { id: "reel-2", src: "https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=600&h=1050&fit=crop" },
+  { id: "reel-3", src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=1050&fit=crop" },
+  { id: "reel-4", src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=1050&fit=crop" },
+  { id: "reel-5", src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=1050&fit=crop" },
+  { id: "reel-6", src: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=1050&fit=crop" },
+  { id: "reel-7", src: "https://images.unsplash.com/photo-1476820865390-c52aeebb9891?w=600&h=1050&fit=crop" },
+  { id: "reel-8", src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&h=1050&fit=crop" },
+];
 
 export default function PortfolioPage() {
   const [view, setView] = useState<"image" | "reels">("image");
@@ -53,10 +76,34 @@ export default function PortfolioPage() {
           </button>
         </div>
 
-        <div className="flex min-h-[400px] w-full max-w-6xl items-center justify-center rounded-2xl border border-dashed border-border">
-          <p className="text-muted-foreground">
-            {view === "image" ? "Image content coming soon" : "Reels content coming soon"}
-          </p>
+        <div className="w-full max-w-7xl">
+          {view === "image" ? (
+            <Gallery>
+              <GalleryGrid>
+                {PORTFOLIO_IMAGES.map((image) => (
+                  <GalleryImage
+                    key={image.id}
+                    id={image.id}
+                    src={image.src}
+                    alt={`Portfolio image ${image.id}`}
+                  />
+                ))}
+              </GalleryGrid>
+            </Gallery>
+          ) : (
+            <Gallery>
+              <GalleryGrid>
+                {PORTFOLIO_REELS.map((reel) => (
+                  <GalleryImage
+                    key={reel.id}
+                    id={reel.id}
+                    src={reel.src}
+                    alt={`Portfolio reel ${reel.id}`}
+                  />
+                ))}
+              </GalleryGrid>
+            </Gallery>
+          )}
         </div>
       </main>
 
