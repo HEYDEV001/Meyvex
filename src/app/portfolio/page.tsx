@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import FooterSection5 from "@/components/ui/footer-section-5";
 import { Gallery, GalleryGrid, GalleryImage } from "@/components/ui/shared-element-gallery";
 
@@ -46,32 +47,46 @@ export default function PortfolioPage() {
         </Link>
 
         <h1 className="text-center text-4xl font-bold tracking-tight text-foreground md:text-6xl">
-          We&apos;re not an Agency
+          We&apos;re not an <span style={{ color: "#FC3712" }}>Agency</span>
           <br />
-          We&apos;re an Eco-System
+          We&apos;re an <span style={{ color: "#FC3712" }}>Eco-System</span>
         </h1>
 
         <div className="inline-flex rounded-full border border-border bg-muted/40 p-1">
           <button
             type="button"
             onClick={() => setView("image")}
-            className={`rounded-full px-6 py-2 text-sm font-medium transition-colors ${
+            className={`relative rounded-full px-6 py-2 text-sm font-medium transition-colors ${
               view === "image"
-                ? "bg-foreground text-background"
+                ? "text-white"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
+            {view === "image" && (
+              <motion.span
+                layoutId="portfolio-toggle-pill"
+                className="absolute inset-0 -z-10 rounded-full bg-[#000000]"
+                transition={{ type: "spring", stiffness: 180, damping: 26, mass: 1 }}
+              />
+            )}
             Image
           </button>
           <button
             type="button"
             onClick={() => setView("reels")}
-            className={`rounded-full px-6 py-2 text-sm font-medium transition-colors ${
+            className={`relative rounded-full px-6 py-2 text-sm font-medium transition-colors ${
               view === "reels"
-                ? "bg-foreground text-background"
+                ? "text-white"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
+            {view === "reels" && (
+              <motion.span
+                layoutId="portfolio-toggle-pill"
+                className="absolute inset-0 -z-10 rounded-full bg-[#000000]"
+                transition={{ type: "spring", stiffness: 180, damping: 26, mass: 1 }}
+              />
+            )}
             Reels
           </button>
         </div>
