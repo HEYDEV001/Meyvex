@@ -11,6 +11,7 @@ export interface BentoCardItem {
 
 export interface RuixenBentoCardsProps {
   cards?: BentoCardItem[]
+  title?: string
   heading?: string
   description?: string
 }
@@ -103,6 +104,7 @@ const PlusIcon = ({ className }: { className?: string }) => (
 
 export default function RuixenBentoCards({
   cards,
+  title,
   heading,
   description,
 }: RuixenBentoCardsProps) {
@@ -111,6 +113,12 @@ export default function RuixenBentoCards({
   return (
     <section className="bg-white dark:bg-black dark:bg-transparent border border-gray-200 dark:border-gray-800">
       <div className="mx-auto container border border-gray-200 dark:border-gray-800 py-12 border-t-0 px-4">
+        {title && (
+          <h1 className="mb-8 text-center text-4xl font-bold tracking-tight text-black dark:text-white md:text-6xl">
+            {title}
+          </h1>
+        )}
+
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-auto gap-4">
           {items.map((item, index) => (
