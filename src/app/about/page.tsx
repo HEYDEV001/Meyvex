@@ -55,7 +55,13 @@ export default function AboutPage() {
           <RuixenBentoCards
             cards={ABOUT_CARDS}
             title="About Us"
-            heading="Built with care. Driven by craft."
+            heading={
+              <>
+                Built with care.
+                <br />
+                Driven by craft.
+              </>
+            }
             description="Meyvex is a small studio that partners closely with founders and teams to design, build, and grow products people actually want to use. We care about the details as much as the big picture."
           />
         </div>

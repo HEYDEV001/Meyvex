@@ -12,7 +12,7 @@ export interface BentoCardItem {
 export interface RuixenBentoCardsProps {
   cards?: BentoCardItem[]
   title?: string
-  heading?: string
+  heading?: React.ReactNode
   description?: string
 }
 
@@ -69,7 +69,7 @@ const PlusCard: React.FC<{
       <CornerPlusIcons />
       {/* Content */}
       <div className="relative z-10 space-y-2">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+        <h3 className="text-xl font-bold" style={{ color: "#F83F16" }}>
           {title}
         </h3>
         <p className="text-gray-700 dark:text-gray-300">{description}</p>
@@ -128,8 +128,8 @@ export default function RuixenBentoCards({
           </div>
 
           {/* Section Footer Heading */}
-          <div className="max-w-2xl ml-auto text-right px-4 mt-6 lg:-mt-20">
-            <h2 className="text-4xl md:text-6xl font-bold text-black dark:text-white mb-4">
+          <div className="max-w-3xl ml-auto text-right px-4 mt-2 lg:-mt-32">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-white mb-4">
               {heading ?? "Built for performance. Designed for flexibility."}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
