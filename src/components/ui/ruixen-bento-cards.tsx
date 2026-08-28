@@ -111,32 +111,34 @@ export default function RuixenBentoCards({
   const items = cards && cards.length > 0 ? cards : DEFAULT_CARDS
 
   return (
-    <section className="bg-white dark:bg-black dark:bg-transparent border border-gray-200 dark:border-gray-800">
-      <div className="mx-auto container border border-gray-200 dark:border-gray-800 py-12 border-t-0 px-4">
-        {title && (
-          <h1 className="mb-8 text-center text-4xl font-bold tracking-tight text-black dark:text-white md:text-6xl">
-            {title}
-          </h1>
-        )}
+    <div>
+      {title && (
+        <h1 className="mx-auto mb-8 max-w-7xl px-4 text-center text-4xl font-bold tracking-tight text-black dark:text-white md:text-6xl">
+          {title}
+        </h1>
+      )}
 
-        {/* Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-auto gap-4">
-          {items.map((item, index) => (
-            <PlusCard key={index} {...item} />
-          ))}
-        </div>
+      <section className="bg-white dark:bg-black dark:bg-transparent border border-gray-200 dark:border-gray-800">
+        <div className="mx-auto container border border-gray-200 dark:border-gray-800 py-12 border-t-0 px-4">
+          {/* Responsive Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-auto gap-4">
+            {items.map((item, index) => (
+              <PlusCard key={index} {...item} />
+            ))}
+          </div>
 
-        {/* Section Footer Heading */}
-        <div className="max-w-2xl ml-auto text-right px-4 mt-6 lg:-mt-20">
-          <h2 className="text-4xl md:text-6xl font-bold text-black dark:text-white mb-4">
-            {heading ?? "Built for performance. Designed for flexibility."}
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg">
-            {description ??
-              "Ruixen UI gives you the tools to build beautiful, high-performing websites with lightning speed. Each component is thoughtfully designed to be flexible, reusable, and accessible."}
-          </p>
+          {/* Section Footer Heading */}
+          <div className="max-w-2xl ml-auto text-right px-4 mt-6 lg:-mt-20">
+            <h2 className="text-4xl md:text-6xl font-bold text-black dark:text-white mb-4">
+              {heading ?? "Built for performance. Designed for flexibility."}
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 text-lg">
+              {description ??
+                "Ruixen UI gives you the tools to build beautiful, high-performing websites with lightning speed. Each component is thoughtfully designed to be flexible, reusable, and accessible."}
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }
