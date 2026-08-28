@@ -31,7 +31,7 @@ export default function SiteNav() {
 
   const navItems = [
     { label: "Services", onClick: () => navigate("/services") },
-    { label: "About" },
+    { label: "About", onClick: () => navigate("/about") },
     { label: "Portfolio", onClick: () => navigate("/portfolio") },
     { label: "Contact", onClick: () => navigate("/contact") },
   ];
