@@ -1,5 +1,52 @@
 import Link from "next/link";
+import { Changelog1, type ChangelogEntry } from "@/components/ui/changelog-1";
 import FooterSection5 from "@/components/ui/footer-section-5";
+
+const PRIVACY_ENTRIES: ChangelogEntry[] = [
+  {
+    version: "Section 1",
+    title: "Information We Collect",
+    description:
+      "We collect information you provide directly to us, as well as information gathered automatically when you use our services.",
+    items: [
+      "Contact details such as your name, email address, and phone number",
+      "Usage data including pages visited and actions taken on our site",
+      "Device and browser information collected automatically",
+    ],
+  },
+  {
+    version: "Section 2",
+    title: "How We Use Your Information",
+    description:
+      "We use the information we collect to provide, maintain, and improve our services, and to communicate with you.",
+    items: [
+      "To respond to your inquiries and provide customer support",
+      "To personalize and improve your experience with our services",
+      "To send updates, marketing communications, and important notices",
+    ],
+  },
+  {
+    version: "Section 3",
+    title: "Data Security",
+    description:
+      "We implement reasonable technical and organizational measures designed to protect your information from unauthorized access, alteration, or disclosure.",
+    items: [
+      "Access to personal data is restricted to authorized personnel only",
+      "No method of transmission or storage is guaranteed to be 100% secure",
+    ],
+  },
+  {
+    version: "Section 4",
+    title: "Your Rights",
+    description:
+      "You have the right to access, correct, or request deletion of your personal information, subject to applicable law.",
+    items: [
+      "You may request a copy of the personal data we hold about you",
+      "You may ask us to correct or delete inaccurate information",
+      "You may opt out of marketing communications at any time",
+    ],
+  },
+];
 
 export default function PrivacyPolicyPage() {
   return (
@@ -16,6 +63,12 @@ export default function PrivacyPolicyPage() {
         >
           Contact
         </Link>
+
+        <Changelog1
+          title="Privacy Policy"
+          description="Learn how we collect, use, and protect your personal information."
+          entries={PRIVACY_ENTRIES}
+        />
       </main>
 
       <FooterSection5 />
