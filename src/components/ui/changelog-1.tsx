@@ -9,7 +9,6 @@ export type ChangelogEntry = {
   title: string;
   description: string;
   items?: string[];
-  image?: string;
   button?: {
     url: string;
     text: string;
@@ -25,62 +24,48 @@ export interface Changelog1Props {
 
 export const defaultEntries: ChangelogEntry[] = [
   {
-    version: "Version 1.3.0",
+    version: "Section 1",
     date: "15 November 2024",
-    title: "Enhanced Analytics Dashboard",
+    title: "Acceptance of Terms",
     description:
-      "We've completely redesigned our analytics dashboard to provide deeper insights and improved visualizations of your data.",
+      "By accessing or using our services, you agree to be bound by these terms and conditions. If you do not agree with any part of these terms, you may not use our services.",
     items: [
-      "Interactive data visualizations with real-time updates",
-      "Customizable dashboard widgets",
-      "Export analytics in multiple formats (CSV, PDF, Excel)",
-      "New reporting templates for common use cases",
-      "Improved data filtering and segmentation options",
+      "These terms apply to all visitors, users, and others who access our services",
+      "Continued use of the service constitutes acceptance of any updates to these terms",
+      "You must be of legal age to enter into a binding agreement to use our services",
     ],
-    image: "/images/block/placeholder-aspect-video-1.svg",
-    button: {
-      url: "https://shadcnblocks.com",
-      text: "Learn more",
-    },
   },
   {
-    version: "Version 1.2.5",
+    version: "Section 2",
     date: "7 October 2024",
-    title: "Mobile App Launch",
+    title: "User Responsibilities",
     description:
-      "We're excited to announce the launch of our mobile application, available now on iOS and Android platforms.",
+      "You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account.",
     items: [
-      "Native mobile experience for on-the-go productivity",
-      "Offline mode support for working without internet connection",
-      "Push notifications for important updates",
-      "Biometric authentication for enhanced security",
+      "Provide accurate and complete information when using our services",
+      "Do not use our services for any unlawful or unauthorized purpose",
+      "Notify us immediately of any unauthorized use of your account",
+      "You are solely responsible for the content you submit through our services",
     ],
   },
   {
-    version: "Version 1.2.1",
+    version: "Section 3",
     date: "23 September 2024",
-    title: "New features and improvements",
+    title: "Limitation of Liability",
     description:
-      "Here are the latest updates and improvements to our platform. We are always working to improve our platform and your experience.",
+      "Our services are provided on an \"as is\" and \"as available\" basis without warranties of any kind, either express or implied.",
     items: [
-      "Added new feature to export data",
-      "Improved performance and speed",
-      "Fixed minor bugs and issues",
-      "Added new feature to import data",
+      "We are not liable for any indirect, incidental, or consequential damages",
+      "We do not guarantee uninterrupted or error-free operation of our services",
+      "Your use of our services is at your own risk",
     ],
-    image: "/images/block/placeholder-aspect-video-1.svg",
   },
   {
-    version: "Version 1.0.0",
+    version: "Section 4",
     date: "31 August 2024",
-    title: "First version of our platform",
+    title: "Governing Law",
     description:
-      "Introducing a new platform to help you manage your projects and tasks. We are excited to launch our platform and help you get started. We are always working to improve our platform and your experience.",
-    image: "/images/block/placeholder-aspect-video-1.svg",
-    button: {
-      url: "https://shadcnblocks.com",
-      text: "Learn more",
-    },
+      "These terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles. Any disputes arising from these terms will be resolved in the appropriate courts of jurisdiction.",
   },
 ];
 
@@ -129,13 +114,6 @@ export const Changelog1 = ({
                       </li>
                     ))}
                   </ul>
-                )}
-                {entry.image && (
-                  <img
-                    src={entry.image}
-                    alt={`${entry.version} visual`}
-                    className="mt-8 w-full rounded-lg object-cover"
-                  />
                 )}
                 {entry.button && (
                   <Button
