@@ -24,7 +24,7 @@ const footerLinks = [
       { name: "Customers", href: "#" },
       { name: "Pricing", href: "#" },
       { name: "Help", href: "#" },
-      { name: "Terms", href: "#" },
+      { name: "Terms", href: "/terms-and-conditions" },
     ],
   },
   {
