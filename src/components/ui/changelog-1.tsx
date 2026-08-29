@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 
 export type ChangelogEntry = {
   version: string;
-  date: string;
   title: string;
   description: string;
   items?: string[];
@@ -25,7 +24,6 @@ export interface Changelog1Props {
 export const defaultEntries: ChangelogEntry[] = [
   {
     version: "Section 1",
-    date: "15 November 2024",
     title: "Acceptance of Terms",
     description:
       "By accessing or using our services, you agree to be bound by these terms and conditions. If you do not agree with any part of these terms, you may not use our services.",
@@ -37,7 +35,6 @@ export const defaultEntries: ChangelogEntry[] = [
   },
   {
     version: "Section 2",
-    date: "7 October 2024",
     title: "User Responsibilities",
     description:
       "You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account.",
@@ -50,7 +47,6 @@ export const defaultEntries: ChangelogEntry[] = [
   },
   {
     version: "Section 3",
-    date: "23 September 2024",
     title: "Limitation of Liability",
     description:
       "Our services are provided on an \"as is\" and \"as available\" basis without warranties of any kind, either express or implied.",
@@ -62,7 +58,6 @@ export const defaultEntries: ChangelogEntry[] = [
   },
   {
     version: "Section 4",
-    date: "31 August 2024",
     title: "Governing Law",
     description:
       "These terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles. Any disputes arising from these terms will be resolved in the appropriate courts of jurisdiction.",
@@ -75,7 +70,7 @@ export const Changelog1 = ({
   entries = defaultEntries,
 }: Changelog1Props) => {
   return (
-    <section className="py-32">
+    <section className="pt-12 pb-32">
       <div className="container">
         <div className="mx-auto max-w-3xl">
           <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
@@ -92,12 +87,12 @@ export const Changelog1 = ({
               className="relative flex flex-col gap-4 md:flex-row md:gap-16"
             >
               <div className="top-8 flex h-min w-64 shrink-0 items-center gap-4 md:sticky">
-                <Badge variant="secondary" className="text-xs">
+                <Badge
+                  variant="secondary"
+                  className="border-transparent bg-[#F83F16] text-xs text-white hover:bg-[#F83F16]/90"
+                >
                   {entry.version}
                 </Badge>
-                <span className="text-xs font-medium text-muted-foreground">
-                  {entry.date}
-                </span>
               </div>
               <div className="flex flex-col">
                 <h2 className="mb-3 text-lg leading-tight font-bold text-foreground/90 md:text-2xl">
