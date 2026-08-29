@@ -21,6 +21,8 @@ export default function TermsAndConditionsPage() {
         <Changelog1
           title="Terms & Conditions"
           description="Please read these terms and conditions carefully before using our services."
+          entryTitleClassName="text-xl md:text-3xl"
+          className="space-y-10 md:space-y-14"
         />
       </main>
 
