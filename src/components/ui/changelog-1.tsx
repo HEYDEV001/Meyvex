@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export type ChangelogEntry = {
   version: string;
@@ -19,6 +20,7 @@ export interface Changelog1Props {
   description?: string;
   entries?: ChangelogEntry[];
   className?: string;
+  entryTitleClassName?: string;
 }
 
 export const defaultEntries: ChangelogEntry[] = [
@@ -68,6 +70,8 @@ export const Changelog1 = ({
   title = "Changelog",
   description = "Get the latest updates and improvements to our platform.",
   entries = defaultEntries,
+  className,
+  entryTitleClassName,
 }: Changelog1Props) => {
   return (
     <section className="pt-12 pb-32">
@@ -80,7 +84,12 @@ export const Changelog1 = ({
             {description}
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-3xl space-y-16 md:mt-24 md:space-y-24">
+        <div
+          className={cn(
+            "mx-auto mt-16 max-w-3xl space-y-16 md:mt-24 md:space-y-24",
+            className,
+          )}
+        >
           {entries.map((entry, index) => (
             <div
               key={index}
@@ -95,7 +104,12 @@ export const Changelog1 = ({
                 </Badge>
               </div>
               <div className="flex flex-col">
-                <h2 className="mb-3 text-lg leading-tight font-bold text-foreground/90 md:text-2xl">
+                <h2
+                  className={cn(
+                    "mb-3 text-lg leading-tight font-bold text-foreground/90 md:text-2xl",
+                    entryTitleClassName,
+                  )}
+                >
                   {entry.title}
                 </h2>
                 <p className="text-sm text-muted-foreground md:text-base">

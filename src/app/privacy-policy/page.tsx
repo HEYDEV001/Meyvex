@@ -68,6 +68,8 @@ export default function PrivacyPolicyPage() {
           title="Privacy Policy"
           description="Learn how we collect, use, and protect your personal information."
           entries={PRIVACY_ENTRIES}
+          className="space-y-10 md:space-y-14"
+          entryTitleClassName="text-xl md:text-3xl"
         />
       </main>
 
