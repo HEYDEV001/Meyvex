@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Changelog1 } from "@/components/ui/changelog-1";
 import FooterSection5 from "@/components/ui/footer-section-5";
 
 export default function TermsAndConditionsPage() {
@@ -16,6 +17,11 @@ export default function TermsAndConditionsPage() {
         >
           Contact
         </Link>
+
+        <Changelog1
+          title="Terms & Conditions"
+          description="Please read these terms and conditions carefully before using our services."
+        />
       </main>
 
       <FooterSection5 />
