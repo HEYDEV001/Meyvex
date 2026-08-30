@@ -62,15 +62,15 @@ const Card = ({
 
   return (
     <div
-      className={`w-37.5 lg:w-70 transition-transform duration-300 hover:z-30 hover:scale-105 ${rotate} ${className}`}
+      className={`w-52.5 lg:w-70 transition-transform duration-300 hover:z-30 hover:scale-105 ${rotate} ${className}`}
     >
       <div className="bg-white dark:bg-neutral-900 p-2 rounded-[25px] shadow-[0px_10px_20px_0px_#D3D3D3] dark:shadow-none border border-neutral-100 dark:border-neutral-800">
-        <Pin className={`w-8 h-8 ${textColor} z-20 mb-6 mx-auto`} />
+        <Pin className={`w-8 h-8 ${textColor} z-20 mb-2 lg:mb-6 mx-auto`} />
         <div
           className={`${bgColor} border ${borderColor} rounded-[15px] p-[15px] h-full flex flex-col relative overflow-hidden`}
         >
           <span
-            className={`${textColor} text-4xl font-handwriting mb-5`}
+            className={`${textColor} text-4xl font-handwriting mb-2 lg:mb-5`}
             style={{
               fontFamily: '"Comic Sans MS", "Chalkboard SE", sans-serif',
             }}
@@ -80,7 +80,7 @@ const Card = ({
           <h3 className="text-2xl font-semibold text-neutral-800 dark:text-neutral-100 leading-none mb-[10px]">
             {title}
           </h3>
-          <p className="text-neutral-500 dark:text-neutral-400 text-sm/5 tracking-tight">
+          <p className="text-neutral-500 dark:text-neutral-400 text-xs/4 lg:text-sm/5 tracking-tight">
             {description}
           </p>
         </div>
@@ -117,21 +117,29 @@ const DEFAULT_CARD_POSITIONS: StepPosition[] = [
     rotate: "rotate-8",
   },
   {
-    className: "absolute top-[380px] left-[42%] lg:top-[120px] lg:right-[15%] lg:left-auto",
+    className: "absolute top-[300px] left-[26%] lg:top-[120px] lg:right-[15%] lg:left-auto",
     rotate: "-rotate-8",
   },
   {
-    className: "absolute top-[760px] left-[6%] lg:top-[450px] lg:left-[15%]",
+    className: "absolute top-[600px] left-[6%] lg:top-[450px] lg:left-[15%]",
     rotate: "rotate-8",
   },
   {
-    className: "absolute top-[1140px] left-[40%] lg:top-[570px] lg:right-[10%] lg:left-auto",
+    className: "absolute top-[900px] left-[24%] lg:top-[570px] lg:right-[10%] lg:left-auto",
     rotate: "-rotate-8",
   },
   {
-    className: "absolute top-[1520px] left-[6%] lg:top-[850px] lg:left-[15%]",
+    className: "absolute top-[1200px] left-[6%] lg:top-[850px] lg:left-[15%]",
     rotate: "rotate-8",
   },
+];
+
+const MOBILE_CARD_ANCHORS = [
+  { x: 22, y: 20 },
+  { x: 42, y: 320 },
+  { x: 22, y: 620 },
+  { x: 40, y: 920 },
+  { x: 22, y: 1220 },
 ];
 
 export default function HowItWorks({
@@ -182,7 +190,7 @@ export default function HowItWorks({
   else if (data.length === 4) height = 900;
   else height = 1130;
 
-  const mobileHeight = Math.round(height * 1.7);
+  const mobileHeight = (data.length - 1) * 300 + 300;
 
   return (
     <LazyMotion features={domAnimation}>
@@ -220,7 +228,7 @@ export default function HowItWorks({
           >
             {data.length > 1 && (
               <svg
-                className="absolute top-0 left-0 w-full h-full pointer-events-none block z-0"
+                className="absolute top-0 left-0 w-full h-full pointer-events-none hidden lg:block z-0"
                 viewBox={`0 0 1000 ${height}`}
                 preserveAspectRatio="none"
               >
@@ -250,6 +258,47 @@ export default function HowItWorks({
                       initial={{ strokeDashoffset: 0 }}
                       animate={{
                         strokeDashoffset: -140, // Multiple of 14 (8+6) for seamless loop
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                    />
+                  );
+                })()}
+              </svg>
+            )}
+
+            {data.length > 1 && (
+              <svg
+                className="absolute top-0 left-0 w-full h-full pointer-events-none block lg:hidden z-0"
+                viewBox={`0 0 100 ${mobileHeight}`}
+                preserveAspectRatio="none"
+              >
+                {(() => {
+                  const anchors = data.map(
+                    (_, index) => MOBILE_CARD_ANCHORS[index % MOBILE_CARD_ANCHORS.length],
+                  );
+                  const pathD = anchors.reduce((acc, point, index) => {
+                    if (index === 0) return `M ${point.x} ${point.y}`;
+                    const prev = anchors[index - 1];
+                    const midY = (prev.y + point.y) / 2;
+                    return `${acc} C ${prev.x} ${midY}, ${point.x} ${midY}, ${point.x} ${point.y}`;
+                  }, "");
+                  return (
+                    <m.path
+                      d={pathD}
+                      stroke="currentColor"
+                      className="text-neutral-300 dark:text-neutral-700"
+                      strokeWidth="2"
+                      strokeDasharray="8 6"
+                      fill="none"
+                      strokeLinecap="round"
+                      vectorEffect="non-scaling-stroke"
+                      initial={{ strokeDashoffset: 0 }}
+                      animate={{
+                        strokeDashoffset: -140,
                       }}
                       transition={{
                         duration: 3,
