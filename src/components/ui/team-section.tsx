@@ -22,18 +22,39 @@ export interface AnimatedTeamSectionProps {
 }
 
 // Helper function to calculate the final transform values for each card
-const getCardState = (index: number, total: number) => {
+const getCardState = (index: number, total: number, spread: number) => {
   const centerIndex = (total - 1) / 2;
   const distanceFromCenter = index - centerIndex;
 
   // Horizontal spread to ensure cards are wide apart
-  const x = distanceFromCenter * 90;
+  const x = distanceFromCenter * spread;
   // Vertical lift to form the curve
   const y = Math.abs(distanceFromCenter) * -30;
   // Rotation for the fanned effect
   const rotate = distanceFromCenter * 12;
 
   return { x, y, rotate };
+};
+
+// Keeps the fan spread narrow enough to stay within the viewport on small
+// screens, since the cards are transform-shifted and can't rely on
+// overflow-hidden clipping consistently across mobile browsers.
+const useCardSpread = () => {
+  const [spread, setSpread] = React.useState(90);
+
+  React.useEffect(() => {
+    const updateSpread = () => {
+      const width = window.innerWidth;
+      if (width < 768) setSpread(28);
+      else if (width < 1024) setSpread(75);
+      else setSpread(90);
+    };
+    updateSpread();
+    window.addEventListener("resize", updateSpread);
+    return () => window.removeEventListener("resize", updateSpread);
+  }, []);
+
+  return spread;
 };
 
 const AnimatedTeamSection = React.forwardRef<
@@ -46,6 +67,7 @@ const AnimatedTeamSection = React.forwardRef<
     threshold: 0.2,
   });
   const [selected, setSelected] = React.useState<number | null>(null);
+  const spread = useCardSpread();
 
   React.useEffect(() => {
     if (inView) {
@@ -80,9 +102,9 @@ const AnimatedTeamSection = React.forwardRef<
     visible: (i: number) => ({
       opacity: 1,
       scale: 1,
-      x: getCardState(i, members.length).x,
-      y: getCardState(i, members.length).y,
-      rotate: getCardState(i, members.length).rotate,
+      x: getCardState(i, members.length, spread).x,
+      y: getCardState(i, members.length, spread).y,
+      rotate: getCardState(i, members.length, spread).rotate,
       transition: {
         type: "spring" as const,
         stiffness: 120,
