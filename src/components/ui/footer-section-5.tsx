@@ -41,12 +41,12 @@ const footerLinks = [
   {
     title: "Social",
     links: [
-      { name: "X", href: "#" },
-      { name: "LinkedIn", href: "#" },
-      { name: "Facebook", href: "#" },
-      { name: "Threads", href: "#" },
-      { name: "Instagram", href: "#" },
-      { name: "Youtube", href: "#" },
+      { name: "X", href: "https://x.com/meyvexmedia" },
+      { name: "LinkedIn", href: "https://www.linkedin.com/company/meyvex" },
+      { name: "Facebook", href: "https://www.facebook.com/meyvexmedia" },
+      { name: "Threads", href: "https://www.threads.com/@meyvexmedia" },
+      { name: "Instagram", href: "https://www.instagram.com/meyvexmedia/" },
+      { name: "Youtube", href: "https://www.youtube.com/@meyvexmedia" },
     ],
   },
 ];
@@ -126,16 +126,21 @@ export default function FooterSection5() {
                   {section.title}
                 </h3>
                 <ul className="flex flex-col gap-3 md:gap-4">
-                  {section.links.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
+                  {section.links.map((link) => {
+                    const isExternal = link.href.startsWith("http");
+                    return (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          target={isExternal ? "_blank" : undefined}
+                          rel={isExternal ? "noopener noreferrer" : undefined}
+                          className="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
