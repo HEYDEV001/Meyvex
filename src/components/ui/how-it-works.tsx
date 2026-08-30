@@ -62,7 +62,7 @@ const Card = ({
 
   return (
     <div
-      className={`relative w-full md:w-[280px] transition-transform duration-300 hover:z-30 hover:scale-105 ${rotate} ${className}`}
+      className={`w-37.5 lg:w-70 transition-transform duration-300 hover:z-30 hover:scale-105 ${rotate} ${className}`}
     >
       <div className="bg-white dark:bg-neutral-900 p-2 rounded-[25px] shadow-[0px_10px_20px_0px_#D3D3D3] dark:shadow-none border border-neutral-100 dark:border-neutral-800">
         <Pin className={`w-8 h-8 ${textColor} z-20 mb-6 mx-auto`} />
@@ -112,17 +112,26 @@ export interface HowItWorksProps {
 }
 
 const DEFAULT_CARD_POSITIONS: StepPosition[] = [
-  { className: "md:absolute md:top-0 md:left-[15%]", rotate: "rotate-8" },
   {
-    className: "md:absolute md:top-[120px] md:right-[15%]",
+    className: "absolute top-0 left-[6%] lg:top-0 lg:left-[15%]",
+    rotate: "rotate-8",
+  },
+  {
+    className: "absolute top-[380px] left-[42%] lg:top-[120px] lg:right-[15%] lg:left-auto",
     rotate: "-rotate-8",
   },
-  { className: "md:absolute md:top-[450px] md:left-[15%]", rotate: "rotate-8" },
   {
-    className: "md:absolute md:top-[570px] md:right-[10%]",
+    className: "absolute top-[760px] left-[6%] lg:top-[450px] lg:left-[15%]",
+    rotate: "rotate-8",
+  },
+  {
+    className: "absolute top-[1140px] left-[40%] lg:top-[570px] lg:right-[10%] lg:left-auto",
     rotate: "-rotate-8",
   },
-  { className: "md:absolute md:top-[850px] md:left-[15%]", rotate: "rotate-8" },
+  {
+    className: "absolute top-[1520px] left-[6%] lg:top-[850px] lg:left-[15%]",
+    rotate: "rotate-8",
+  },
 ];
 
 export default function HowItWorks({
@@ -173,6 +182,8 @@ export default function HowItWorks({
   else if (data.length === 4) height = 900;
   else height = 1130;
 
+  const mobileHeight = Math.round(height * 1.7);
+
   return (
     <LazyMotion features={domAnimation}>
       <div
@@ -199,12 +210,17 @@ export default function HowItWorks({
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div
-            className="relative w-full max-w-[1000px] mx-auto flex flex-col space-y-8 md:space-y-0 md:block h-auto md:h-[var(--md-height)]"
-            style={{ "--md-height": `${height}px` } as React.CSSProperties}
+            className="relative w-full max-w-[1000px] mx-auto h-(--mobile-height) lg:h-(--height)"
+            style={
+              {
+                "--mobile-height": `${mobileHeight}px`,
+                "--height": `${height}px`,
+              } as React.CSSProperties
+            }
           >
             {data.length > 1 && (
               <svg
-                className="absolute top-0 left-0 w-full h-full pointer-events-none hidden md:block z-0"
+                className="absolute top-0 left-0 w-full h-full pointer-events-none block z-0"
                 viewBox={`0 0 1000 ${height}`}
                 preserveAspectRatio="none"
               >

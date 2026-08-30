@@ -300,7 +300,7 @@ export default function Home() {
         </section>
       </div>
 
-      <section className="w-full px-4 py-20">
+      <section className="w-full px-4 pt-20 pb-8 lg:pb-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
             Results That Speak
@@ -314,7 +314,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-20">
+      <section className="w-full pt-8 pb-20 lg:pt-20">
         <ImageStreamHero
           images={streamImages}
           className="h-[560px] w-full bg-background"
