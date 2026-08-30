@@ -184,45 +184,46 @@ const logos = [
 
 const ServiceOne = () => (
   <div>
-    <p className="font-bold md:text-4xl text-xl text-white">Brand Identity</p>
+    <p className="font-bold md:text-4xl text-xl text-white">Performance Marketing</p>
     <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-      Distinctive visual systems — logo, color, and typography — built to
-      make a brand instantly recognizable.
+      ROI-driven paid campaigns across search and social, built to turn ad
+      spend into measurable growth.
     </p>
   </div>
 );
 const ServiceTwo = () => (
   <div>
-    <p className="font-bold md:text-4xl text-xl text-white">Web Design & Development</p>
+    <p className="font-bold md:text-4xl text-xl text-white">Social Media Marketing</p>
     <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-      Fast, responsive websites crafted with modern tooling and an eye for
-      detail.
+      Consistent, on-brand content and community management that grows your
+      audience across platforms.
     </p>
   </div>
 );
 const ServiceThree = () => (
   <div>
-    <p className="font-bold md:text-4xl text-xl text-white">Product Strategy</p>
+    <p className="font-bold md:text-4xl text-xl text-white">Content Marketing</p>
     <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-      Research-driven planning that turns rough ideas into a clear product
-      roadmap.
+      Strategic content that builds authority and keeps your audience
+      engaged at every stage.
     </p>
   </div>
 );
 const ServiceFour = () => (
   <div>
-    <p className="font-bold md:text-4xl text-xl text-white">Motion & Animation</p>
+    <p className="font-bold md:text-4xl text-xl text-white">Shopify Development</p>
     <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-      Subtle, purposeful motion that brings interfaces and stories to life.
+      Fast, conversion-focused Shopify storefronts built and customized for
+      your brand.
     </p>
   </div>
 );
 const ServiceFive = () => (
   <div>
-    <p className="font-bold md:text-4xl text-xl text-white">Growth & Marketing</p>
+    <p className="font-bold md:text-4xl text-xl text-white">Retention Marketing</p>
     <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-      Data-informed campaigns designed to turn visibility into real
-      traction.
+      Lifecycle campaigns that keep customers coming back and grow their
+      lifetime value.
     </p>
   </div>
 );
@@ -271,7 +272,7 @@ export default function Home() {
       <MobileNavHeader />
       <FluidFlowGrid />
 
-      <section className="relative mx-auto w-full max-w-3xl px-4 pt-20 pb-16">
+      <section className="relative mx-auto w-full max-w-3xl px-4 pt-20 pb-6 md:pb-16">
         <h2 className="mb-5 text-center font-medium text-foreground text-xl tracking-tight md:text-3xl">
           <span className="text-muted-foreground">Trusted by experts.</span>
           <br />
