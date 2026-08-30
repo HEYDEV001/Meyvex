@@ -130,10 +130,12 @@
 }
 
 /* Sizing for the card-fan-carousel component (src/components/ui/card-fan-carousel.tsx).
-   Heights match the breakpoints its own getHeightMultiplier() function assumes;
-   widths keep the ~4:7 card aspect ratio used by its demo images. */
+   .fan-card heights match the breakpoints its own getHeightMultiplier() function
+   assumes; widths keep the ~4:7 card aspect ratio used by its demo images.
+   .fan-layout is taller than .fan-card below the lg breakpoint to give the fan's
+   downward droop (up to ~7.3rem) room without clipping against the section edge. */
 .fan-layout {
-  height: 22rem;
+  height: 25rem;
 }
 .fan-card {
   position: absolute;
@@ -150,7 +152,7 @@
 }
 @media (min-width: 480px) {
   .fan-layout {
-    height: 26rem;
+    height: 29rem;
   }
   .fan-card {
     width: 14.75rem;
@@ -159,7 +161,7 @@
 }
 @media (min-width: 640px) {
   .fan-layout {
-    height: 28rem;
+    height: 31rem;
   }
   .fan-card {
     width: 16rem;
@@ -168,7 +170,7 @@
 }
 @media (min-width: 768px) {
   .fan-layout {
-    height: 34rem;
+    height: 37rem;
   }
   .fan-card {
     width: 19.5rem;
