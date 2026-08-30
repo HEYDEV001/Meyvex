@@ -121,7 +121,7 @@ export default function FluidFlowGrid() {
     }, []);
 
     return (
-        <div className="relative w-full h-screen overflow-hidden select-none bg-white">
+        <div className="relative w-full h-dvh overflow-hidden select-none bg-white">
             <canvas ref={canvasRef} className="absolute inset-0 block cursor-default" />
 
             <Link href="/" className="absolute top-6 left-6 z-20 md:top-8 md:left-8">
