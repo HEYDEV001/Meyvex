@@ -124,17 +124,17 @@ export default function FluidFlowGrid() {
         <div className="relative w-full h-dvh overflow-hidden select-none bg-white">
             <canvas ref={canvasRef} className="absolute inset-0 block cursor-default" />
 
-            <Link href="/" className="absolute top-6 left-6 z-20 md:top-8 md:left-8">
+            <Link href="/" className="absolute top-8 left-8 z-20 hidden md:block">
                 <img
                     src="/logo.png"
                     alt="Meyvex"
-                    className="h-9 w-auto md:h-11"
+                    className="h-11 w-auto"
                 />
             </Link>
 
             <Link
                 href="/contact"
-                className="absolute top-6 right-6 z-20 rounded-full bg-[#FFE862] px-5 py-2 text-sm font-medium uppercase tracking-tight text-[#242424] transition-transform hover:scale-105 md:top-8 md:right-8"
+                className="absolute top-8 right-8 z-20 hidden rounded-full bg-[#FFE862] px-5 py-2 text-sm font-medium uppercase tracking-tight text-[#242424] transition-transform hover:scale-105 md:block"
                 style={{ letterSpacing: "-0.02em" }}
             >
                 Contact

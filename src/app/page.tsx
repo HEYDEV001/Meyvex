@@ -1,4 +1,5 @@
 import FluidFlowGrid from "@/components/ui/fluid-flow-grid";
+import MobileNavHeader from "@/components/ui/mobile-nav-header";
 import { LogoCloud } from "@/components/ui/logo-cloud-3";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import { ImageStreamHero } from "@/components/ui/image-stream-hero";
@@ -230,7 +231,7 @@ const services = [
   {
     id: 1,
     content: <ServiceOne />,
-    className: "md:col-span-2",
+    className: "row-span-2 md:row-span-1 md:col-span-2",
     thumbnail:
       "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -267,6 +268,7 @@ const services = [
 export default function Home() {
   return (
     <div className="flex flex-col flex-1">
+      <MobileNavHeader />
       <FluidFlowGrid />
 
       <section className="relative mx-auto w-full max-w-3xl px-4 pt-20 pb-16">
@@ -282,18 +284,20 @@ export default function Home() {
         <div className="mt-5 h-px bg-border [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
       </section>
 
-      <section className="w-full px-4 pt-16 pb-6 text-center font-sans">
-        <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-6xl">
-          From Idea to Scale
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg">
-          Strategy, creativity, and performance all working towards growth.
-        </p>
-      </section>
+      <div className="flex h-dvh flex-col pt-16 md:block md:h-auto md:pt-0">
+        <section className="w-full shrink-0 px-4 pt-3 pb-2 text-center font-sans md:pt-16 md:pb-6">
+          <h2 className="text-2xl font-bold uppercase tracking-tight text-foreground md:text-6xl">
+            From Idea to Scale
+          </h2>
+          <p className="mx-auto mt-1 max-w-2xl text-xs text-muted-foreground md:mt-4 md:text-lg">
+            Strategy, creativity, and performance all working towards growth.
+          </p>
+        </section>
 
-      <section className="h-screen pt-2 pb-20 w-full">
-        <LayoutGrid cards={services} />
-      </section>
+        <section className="min-h-0 flex-1 w-full pb-2 md:h-screen md:pt-2 md:pb-20">
+          <LayoutGrid cards={services} />
+        </section>
+      </div>
 
       <section className="w-full px-4 py-20">
         <div className="mx-auto max-w-3xl text-center">
