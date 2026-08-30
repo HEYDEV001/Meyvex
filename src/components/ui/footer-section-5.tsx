@@ -55,8 +55,8 @@ export default function FooterSection5() {
   return (
     <footer className="w-full bg-white relative overflow-hidden antialiased [font-synthesis:none]">
       {/* Large Stroke Text Section */}
-      <div className="relative w-full flex justify-center items-end pt-24 md:pt-32 pb-0 z-20">
-        <h1 className="text-[200px] sm:text-[280px] md:text-[360px] font-semibold text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.4)] leading-[0.75] select-none -mb-4 md:-mb-6 opacity-50">
+      <div className="relative w-full flex justify-center items-end pt-10 md:pt-16 lg:pt-32 pb-0 z-20">
+        <h1 className="text-[80px] min-[400px]:text-[100px] min-[480px]:text-[120px] min-[640px]:text-[160px] md:text-[190px] lg:text-[360px] font-semibold text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.4)] leading-[0.75] select-none -mb-4 md:-mb-6 opacity-50">
           {companyName}
         </h1>
       </div>

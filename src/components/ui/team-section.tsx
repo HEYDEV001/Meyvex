@@ -45,8 +45,8 @@ const useCardSpread = () => {
   React.useEffect(() => {
     const updateSpread = () => {
       const width = window.innerWidth;
-      if (width < 768) setSpread(28);
-      else if (width < 1024) setSpread(75);
+      if (width < 768) setSpread(32);
+      else if (width < 1024) setSpread(85);
       else setSpread(90);
     };
     updateSpread();
@@ -116,10 +116,10 @@ const AnimatedTeamSection = React.forwardRef<
   return (
     <section
       ref={ref}
-      className={cn("w-full py-20 lg:py-28 overflow-hidden", className)}
+      className={cn("w-full pt-20 pb-8 lg:pb-28 lg:pt-28 overflow-hidden", className)}
       {...props}
     >
-      <div className="container mx-auto flex flex-col items-center text-center px-4">
+      <div className="container mx-auto flex flex-col items-center text-center px-2 lg:px-4">
         {/* Section Header */}
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-3">
           {title}
