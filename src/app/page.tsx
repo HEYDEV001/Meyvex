@@ -309,7 +309,7 @@ export default function Home() {
             Real outcomes from real partnerships, drag to explore.
           </p>
         </div>
-        <div className="relative mt-12 h-[580px] w-full">
+        <div className="relative mt-12 h-50 w-full lg:h-145">
           <CircularGallery items={resultItems} bend={3} borderRadius={0.05} scrollEase={0.02} />
         </div>
       </section>
