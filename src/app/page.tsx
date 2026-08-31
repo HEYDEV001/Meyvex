@@ -186,8 +186,10 @@ const ServiceOne = () => (
   <div>
     <p className="font-bold md:text-4xl text-xl text-white">Performance Marketing</p>
     <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-      ROI-driven paid campaigns across search and social, built to turn ad
-      spend into measurable growth.
+      High-velocity paid acquisition across Meta and Google. We don&rsquo;t
+      just &quot;run ads&quot;—we engineer data-backed growth engines that
+      optimize for maximum ROAS and aggressive revenue scaling for your D2C
+      brand.
     </p>
   </div>
 );
@@ -195,8 +197,9 @@ const ServiceTwo = () => (
   <div>
     <p className="font-bold md:text-4xl text-xl text-white">Social Media Marketing</p>
     <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-      Consistent, on-brand content and community management that grows your
-      audience across platforms.
+      Dominating the social landscape. We build organic communities and
+      massive social proof that turn your brand into a category leader,
+      creating a long-term competitive moat for your D2C business.
     </p>
   </div>
 );
@@ -204,8 +207,9 @@ const ServiceThree = () => (
   <div>
     <p className="font-bold md:text-4xl text-xl text-white">Content Marketing</p>
     <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-      Strategic content that builds authority and keeps your audience
-      engaged at every stage.
+      High-impact creative strategy designed to convert. We create brand
+      narratives and high-performance visual assets that build immediate
+      trust, lower your CAC, and elevate your brand above the competition.
     </p>
   </div>
 );
@@ -213,8 +217,10 @@ const ServiceFour = () => (
   <div>
     <p className="font-bold md:text-4xl text-xl text-white">Shopify Development</p>
     <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-      Fast, conversion-focused Shopify storefronts built and customized for
-      your brand.
+      High-conversion digital storefronts built for scale. We develop
+      lightning-fast Shopify experiences engineered to turn traffic into
+      profit through seamless UX and data-backed conversion rate
+      optimization (CRO).
     </p>
   </div>
 );
@@ -222,8 +228,10 @@ const ServiceFive = () => (
   <div>
     <p className="font-bold md:text-4xl text-xl text-white">Retention Marketing</p>
     <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-      Lifecycle campaigns that keep customers coming back and grow their
-      lifetime value.
+      The profitability engine of your ecosystem. We deploy advanced
+      WhatsApp and Email automation to maximize Customer Lifetime Value
+      (LTV), turning every single acquisition into a recurring revenue
+      stream.
     </p>
   </div>
 );
@@ -288,10 +296,11 @@ export default function Home() {
       <div className="flex h-dvh flex-col pt-16 md:block md:h-auto md:pt-0">
         <section className="w-full shrink-0 px-4 pt-3 pb-2 text-center font-sans md:pt-16 md:pb-6">
           <h2 className="text-2xl font-bold uppercase tracking-tight text-foreground md:text-6xl">
-            From Idea to Scale
+            The D2C Blueprint
           </h2>
           <p className="mx-auto mt-1 max-w-2xl text-xs text-muted-foreground md:mt-4 md:text-lg">
-            Strategy, creativity, and performance all working towards growth.
+            A specialized growth framework for Indian D2C founders ready to
+            own their market and scale globally.
           </p>
         </section>
 
