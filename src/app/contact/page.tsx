@@ -21,12 +21,12 @@ export default function ContactPage() {
         </Link>
 
         <h1 className="text-center text-4xl font-bold tracking-tight text-foreground md:text-6xl">
-          Don&apos;t Hesitate To Connect
+          Let&apos;s Make It Happen.
         </h1>
         <div className="mx-auto max-w-5xl">
           <ContactCard
-            title="Get in touch"
-            description="If you have any questions regarding our Services or need help, please fill out the form here. We do our best to respond within 1 business day."
+            title="Start a Conversation."
+            description="Have a growth challenge, a new idea, or a brand ready for its next stage? Tell us what you're building. We'll take it from there."
             contactInfo={[
               {
                 icon: MailIcon,
@@ -41,7 +41,7 @@ export default function ContactPage() {
               {
                 icon: MapPinIcon,
                 label: "Address",
-                value: "306, HQ City Walk, Scheme No.54, Vijaynagar, Indore, 452010",
+                value: "306, HQ City Walk, Scheme No.54, Vijay Nagar, Indore, 452010",
                 className: "col-span-2",
               },
             ]}
@@ -49,22 +49,22 @@ export default function ContactPage() {
             <form action="" className="w-full space-y-4">
               <div className="flex flex-col gap-2">
                 <Label>Name</Label>
-                <Input type="text" />
+                <Input type="text" placeholder="Your name" />
               </div>
               <div className="flex flex-col gap-2">
                 <Label>Email</Label>
-                <Input type="email" />
+                <Input type="email" placeholder="Your work email" />
               </div>
               <div className="flex flex-col gap-2">
                 <Label>Phone</Label>
-                <Input type="phone" />
+                <Input type="phone" placeholder="Your phone number" />
               </div>
               <div className="flex flex-col gap-2">
                 <Label>Message</Label>
-                <Textarea />
+                <Textarea placeholder="Tell us a little about your brand and what you're looking to build." />
               </div>
               <Button className="w-full" type="button">
-                Submit
+                Let&apos;s Talk →
               </Button>
             </form>
           </ContactCard>
