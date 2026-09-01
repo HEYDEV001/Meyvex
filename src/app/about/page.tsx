@@ -4,33 +4,33 @@ import RuixenBentoCards from "@/components/ui/ruixen-bento-cards";
 
 const ABOUT_CARDS = [
   {
-    title: "Thoughtful Design",
+    title: "Thoughtful by Design",
     description:
-      "Every project starts with understanding the problem deeply before we design a single pixel. We believe great design solves real problems, not just looks good.",
+      "We start with the why. Before we make a creative, launch a campaign or change a funnel, we understand the brand, the customer and the problem we're solving.",
     className: "lg:col-span-3 lg:row-span-2",
   },
   {
-    title: "Small, Focused Team",
+    title: "D2C Is Our Playground",
     description:
-      "We stay lean on purpose. A tight team means clear communication, fast decisions, and work that never gets lost in hand-offs.",
+      "We understand the game because we play it every day. From the first purchase to the next, we look beyond individual channels to understand what actually moves a D2C business forward.",
     className: "lg:col-span-2 lg:row-span-2",
   },
   {
     title: "How We Work",
     description:
-      "We work in short, focused cycles — from discovery and strategy through design, build, and launch. You're looped in at every stage, not just the beginning and the end. We favor working software over long decks, and we'd rather show you something real early than talk about it for weeks.",
+      "Strategy first. Execution close behind. We move fast, test often and stay close to the work. Every decision has a reason, every test has a takeaway, and every win becomes a learning.",
     className: "lg:col-span-4 lg:row-span-1",
   },
   {
-    title: "Built to Last",
+    title: "Built on Partnership",
     description:
-      "We design and build systems that hold up long after launch, not just for the demo.",
+      "We work with brands, not just briefs. The best work happens when we're close to the people building the business. We get involved, stay accountable and treat your growth like it matters to us.",
     className: "lg:col-span-2 lg:row-span-1",
   },
   {
-    title: "Always Learning",
+    title: "Our Vision",
     description:
-      "The tools change fast. We stay current so your product benefits from what's actually working today, not what worked five years ago.",
+      "Build brands that outgrow the playbook. We want to help build the next generation of Indian D2C brands—brands that don't just compete in their category, but redefine it and take Indian ambition to the world.",
     className: "lg:col-span-2 lg:row-span-1",
   },
 ];
@@ -55,14 +55,8 @@ export default function AboutPage() {
           <RuixenBentoCards
             cards={ABOUT_CARDS}
             title="About Us"
-            heading={
-              <>
-                Built with care.
-                <br />
-                Driven by craft.
-              </>
-            }
-            description="Meyvex is a small studio that partners closely with founders and teams to design, build, and grow products people actually want to use. We care about the details as much as the big picture."
+            heading="Built for brands that want to go further."
+            description="Meyvex is a D2C growth ecosystem built for ambitious founders. We bring strategy, creative, performance, technology and retention together to help brands make better decisions, move faster and build something that lasts."
           />
         </div>
       </main>
