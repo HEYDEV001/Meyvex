@@ -411,93 +411,171 @@ const ITEMS: CardItem[] = [
   },
   {
     id: "card-3",
-    title: "Product Strategy",
+    title: "Content Marketing",
     image:
       "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: (
-      <div className="space-y-4 text-muted-foreground leading-relaxed">
-        <p>
-          Research-driven planning that turns a rough idea into a clear,
-          prioritized roadmap — so every design and engineering decision has a
-          reason behind it.
-        </p>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <strong className="text-foreground">Discovery:</strong>{" "}
-            User research and competitive analysis to ground decisions in
-            reality, not guesswork.
-          </li>
-          <li>
-            <strong className="text-foreground">Roadmapping:</strong>{" "}
-            A prioritized plan that balances user needs, business goals, and
-            technical constraints.
-          </li>
-          <li>
-            <strong className="text-foreground">Validation:</strong>{" "}
-            Fast prototyping and testing loops before committing to full
-            builds.
-          </li>
-        </ul>
-        <div className="pt-8">
-          <h4 className="text-foreground font-semibold mb-4 text-lg">
-            How we plan
-          </h4>
-          <div className="flex flex-col gap-4">
-            <div className="h-32 bg-muted rounded-lg border-2 border-dashed border-muted-foreground/20 flex items-center justify-center">
-              Discovery
-            </div>
-            <div className="h-10 text-center text-muted-foreground text-sm">
-              ↓ leads to ↓
-            </div>
-            <div className="h-32 bg-muted rounded-lg border-2 border-dashed border-muted-foreground/20 flex items-center justify-center">
-              Roadmap
-            </div>
-          </div>
-        </div>
+      <div className="space-y-8 text-muted-foreground leading-relaxed">
+        <ServiceHero
+          tagline="Content People Believe."
+          paragraphs={[
+            "UGC-led content built to make your product feel relevant, relatable and worth trying.",
+            "From creator selection to concepts, scripts and final edits, we produce content designed for the way people actually discover and evaluate D2C brands.",
+          ]}
+          ctaLabel="Create With Meyvex →"
+          ctaHref="/contact"
+        />
+
+        <ServiceSection
+          eyebrow="The Problem"
+          heading="Your Product Needs More Than a Good Video."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            People trust people.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            The right creator, the right hook and the right story can make a
+            product feel instantly familiar—and give customers a reason to
+            care.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We build UGC around those moments.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection eyebrow="What We Do" heading="UGC, Built for Performance.">
+          <WhatWeDoGrid
+            items={[
+              {
+                title: "Creator Sourcing",
+                description:
+                  "We find creators who fit your audience, category and brand personality.",
+              },
+              {
+                title: "Concepts & Scripts",
+                description:
+                  "Hooks and storylines built around real customer problems, desires and buying triggers.",
+              },
+              {
+                title: "UGC Production",
+                description:
+                  "Authentic, creator-led videos that feel native to the platform and natural to the audience.",
+              },
+              {
+                title: "Editing & Variations",
+                description:
+                  "Multiple cuts, hooks and formats ready for organic content and paid campaigns.",
+              },
+            ]}
+          />
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Our Approach"
+          heading="Find the Angle. Make the Content. Learn From It."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            We develop multiple creative directions, see what connects with
+            the audience and use those insights to shape the next batch.
+          </p>
+          <p className="font-semibold text-foreground">
+            Research → Concept → Create → Test → Learn
+          </p>
+        </ServiceSection>
+
+        <ServiceSection eyebrow="Why Meyvex" heading="Content With a Job to Do.">
+          <p className="text-muted-foreground leading-relaxed">
+            Every UGC video starts with a purpose—attention, trust, education
+            or conversion.
+          </p>
+        </ServiceSection>
       </div>
     ),
   },
   {
     id: "card-4",
-    title: "Motion & Animation",
+    title: "Shopify Development",
     image:
       "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: (
-      <div className="space-y-4 text-muted-foreground leading-relaxed">
-        <p>
-          Subtle, purposeful motion that brings interfaces and stories to life
-          — used to guide attention, not distract from it.
-        </p>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <strong className="text-foreground">Micro-interactions:</strong>{" "}
-            Small animated details that make an interface feel considered and
-            alive.
-          </li>
-          <li>
-            <strong className="text-foreground">Scroll &amp; Page Motion:</strong>{" "}
-            Transitions that guide a visitor through a story, not just
-            decorate a page.
-          </li>
-          <li>
-            <strong className="text-foreground">Brand Animation:</strong>{" "}
-            Motion identity for launch videos, social content, and product
-            demos.
-          </li>
-        </ul>
-        <div className="pt-8">
-          <h4 className="text-foreground font-semibold mb-4 text-lg">
-            Where motion shows up
-          </h4>
-          <div className="grid gap-4">
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div className="bg-muted/50 rounded-lg p-4 space-y-2" key={i}>
-                <div className="h-4 w-1/3 bg-muted rounded" />
-                <div className="h-20 w-full bg-muted rounded" />
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="space-y-8 text-muted-foreground leading-relaxed">
+        <ServiceHero
+          tagline="Your Store Should Sell the Brand."
+          paragraphs={[
+            "High-converting Shopify experiences built to turn more visitors into customers.",
+            "We combine thoughtful UX, sharp design and conversion-focused development to create storefronts that are fast, intuitive and built for growth.",
+          ]}
+          ctaLabel="Build My Store →"
+          ctaHref="/contact"
+        />
+
+        <ServiceSection
+          eyebrow="The Problem"
+          heading="Traffic Means Little Without Conversion."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            A customer can discover your brand through an ad, creator or
+            search—but the store decides what happens next.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Slow pages, confusing navigation and weak product journeys can
+            turn high-intent visitors into lost customers.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We build the experience around the decision to buy.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="What We Do"
+          heading="Built Around the Customer Journey."
+        >
+          <WhatWeDoGrid
+            items={[
+              {
+                title: "Shopify Store Development",
+                description:
+                  "Custom storefronts designed around your brand and business goals.",
+              },
+              {
+                title: "UX & UI Design",
+                description:
+                  "Clear, intuitive experiences that make discovering and buying easier.",
+              },
+              {
+                title: "Conversion Optimisation",
+                description:
+                  "Product pages, offers and checkout journeys refined to reduce friction.",
+              },
+              {
+                title: "Speed & Performance",
+                description:
+                  "Fast-loading storefronts built for a smoother shopping experience across devices.",
+              },
+            ]}
+          />
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Our Approach"
+          heading="Understand → Design → Build → Optimise"
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            We look at how customers move through your store, identify the
+            friction and build an experience that makes the next step feel
+            natural.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Why Meyvex"
+          heading="A Store Built for the Full Growth Journey."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            Your Shopify store sits at the centre of your acquisition,
+            conversion and retention efforts.
+          </p>
+        </ServiceSection>
       </div>
     ),
   },
