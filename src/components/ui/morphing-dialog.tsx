@@ -92,7 +92,7 @@ export function MorphingDialog() {
                   hidden={false}
                 >
                   <DialogPopup
-                    className="relative w-full max-w-4xl flex flex-col overflow-hidden rounded-2xl"
+                    className="relative w-full max-w-4xl flex flex-col overflow-hidden rounded-2xl border-0 shadow-none"
                     hidden={false}
                     render={
                       <motion.div
@@ -181,48 +181,163 @@ type CardItem = {
   content: React.ReactNode;
 };
 
+function ServiceHero({
+  tagline,
+  paragraphs,
+  ctaLabel,
+  ctaHref,
+}: {
+  tagline: string;
+  paragraphs: string[];
+  ctaLabel: string;
+  ctaHref: string;
+}) {
+  return (
+    <div className="space-y-4">
+      <p className="text-xl sm:text-2xl font-semibold text-foreground">
+        {tagline}
+      </p>
+      {paragraphs.map((paragraph, i) => (
+        <p className="text-muted-foreground leading-relaxed" key={i}>
+          {paragraph}
+        </p>
+      ))}
+      <a
+        className="inline-flex items-center gap-1.5 pt-2 font-semibold text-foreground underline-offset-4 hover:underline"
+        href={ctaHref}
+      >
+        {ctaLabel}
+      </a>
+    </div>
+  );
+}
+
+function ServiceSection({
+  eyebrow,
+  heading,
+  children,
+}: {
+  eyebrow: string;
+  heading: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="space-y-3 border-t border-border pt-8">
+      <p className="inline-block w-fit rounded-full bg-[#FEE762] px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#232323]">
+        {eyebrow}
+      </p>
+      <h4 className="text-2xl font-bold text-[#F83F16]">{heading}</h4>
+      {children}
+    </div>
+  );
+}
+
+function WhatWeDoGrid({
+  items,
+}: {
+  items: { title: string; description: string }[];
+}) {
+  const spans = ["sm:col-span-2", "sm:col-span-3", "sm:col-span-3", "sm:col-span-2"];
+
+  return (
+    <div className="grid gap-4 sm:grid-cols-5">
+      {items.map((item, i) => (
+        <div
+          className={`space-y-1.5 rounded-3xl bg-[#B4C5F1]/40 p-4 ${spans[i % spans.length]}`}
+          key={item.title}
+        >
+          <p className="font-semibold text-foreground">{item.title}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const ITEMS: CardItem[] = [
   {
     id: "card-1",
-    title: "Brand Identity",
+    title: "Performance Marketing",
     image:
       "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: (
-      <div className="space-y-4 text-muted-foreground leading-relaxed">
-        <p>
-          A brand is more than a logo — it&apos;s the visual system that makes a
-          company instantly recognizable. We build distinctive identities that
-          hold up across every touchpoint.
-        </p>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <strong className="text-foreground">Logo &amp; Mark:</strong>{" "}
-            A primary mark and its variations, built to scale from a favicon to
-            a billboard.
-          </li>
-          <li>
-            <strong className="text-foreground">Color &amp; Typography:</strong>{" "}
-            A cohesive palette and type system that carries your voice
-            consistently.
-          </li>
-          <li>
-            <strong className="text-foreground">Brand Guidelines:</strong>{" "}
-            A living document your team can use to stay on-brand as you grow.
-          </li>
-        </ul>
-        <div className="pt-8">
-          <h4 className="text-foreground font-semibold mb-4 text-lg">
-            What&apos;s included
-          </h4>
-          <div className="grid gap-4">
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div className="bg-muted/50 rounded-lg p-4 space-y-2" key={i}>
-                <div className="h-4 w-1/3 bg-muted rounded" />
-                <div className="h-20 w-full bg-muted rounded" />
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="space-y-8 text-muted-foreground leading-relaxed">
+        <ServiceHero
+          tagline="Turn Ad Spend Into Real Growth."
+          paragraphs={[
+            "Performance marketing built for D2C brands that want more than clicks and pretty dashboards.",
+            "We combine paid acquisition, creative testing and funnel optimisation to build a growth engine that gets better with every test.",
+          ]}
+          ctaLabel="Let's Talk Growth →"
+          ctaHref="/contact"
+        />
+
+        <ServiceSection
+          eyebrow="The Problem"
+          heading="More Budget Isn't Always the Answer."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            If CAC keeps rising, creatives stop converting and scaling starts
+            hurting margins, the problem isn&apos;t always your ad spend.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We find what&apos;s holding your acquisition back—and fix it.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="What We Do"
+          heading="Everything Your Growth Engine Needs."
+        >
+          <WhatWeDoGrid
+            items={[
+              {
+                title: "Paid Acquisition",
+                description:
+                  "Meta & Google campaigns built around your business goals and unit economics.",
+              },
+              {
+                title: "Creative Testing",
+                description:
+                  "Hooks, angles, formats and messaging tested to find what actually converts.",
+              },
+              {
+                title: "Funnel Optimisation",
+                description:
+                  "From ad click to checkout, we identify and remove conversion leaks.",
+              },
+              {
+                title: "Scale & Optimise",
+                description:
+                  "We double down on what works and continuously optimise what doesn't.",
+              },
+            ]}
+          />
+        </ServiceSection>
+
+        <ServiceSection eyebrow="Our Approach" heading="Test. Learn. Scale. Repeat.">
+          <p className="text-muted-foreground leading-relaxed">
+            We don&apos;t believe in launching a campaign and letting it run.
+          </p>
+          <p className="font-semibold text-foreground">
+            Research → Test → Learn → Optimise → Scale
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Every result gives us a better understanding of your customer—and
+            a smarter direction for the next move.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Why Meyvex"
+          heading="Performance Doesn't Exist in Isolation."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            Your ads are only as strong as the experience behind them.
+          </p>
+        </ServiceSection>
       </div>
     ),
   },
