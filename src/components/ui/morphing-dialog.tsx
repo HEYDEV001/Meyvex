@@ -133,7 +133,7 @@ export function MorphingDialog() {
 
                         <div className="flex flex-col p-4 sm:p-8 justify-start text-left space-y-6">
                           <DialogTitle
-                            className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold"
+                            className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold uppercase"
                             render={
                               <motion.h2 layoutId={`title-${activeItem.id}`}>
                                 {activeItem.title}
@@ -194,7 +194,7 @@ function ServiceHero({
 }) {
   return (
     <div className="space-y-4">
-      <p className="text-xl sm:text-2xl font-semibold text-foreground">
+      <p className="text-xl sm:text-2xl font-semibold uppercase text-foreground">
         {tagline}
       </p>
       {paragraphs.map((paragraph, i) => (
@@ -219,14 +219,14 @@ function ServiceSection({
 }: {
   eyebrow: string;
   heading: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <div className="space-y-3 border-t border-border pt-8">
       <p className="inline-block w-fit rounded-full bg-[#FEE762] px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#232323]">
         {eyebrow}
       </p>
-      <h4 className="text-2xl font-bold text-[#F83F16]">{heading}</h4>
+      <h4 className="text-2xl font-bold uppercase text-[#F83F16]">{heading}</h4>
       {children}
     </div>
   );
@@ -246,7 +246,7 @@ function WhatWeDoGrid({
           className={`space-y-1.5 rounded-3xl bg-[#B4C5F1]/40 p-4 ${spans[i % spans.length]}`}
           key={item.title}
         >
-          <p className="font-semibold text-foreground">{item.title}</p>
+          <p className="font-semibold uppercase text-foreground">{item.title}</p>
           <p className="text-sm text-muted-foreground leading-relaxed">
             {item.description}
           </p>
@@ -343,45 +343,69 @@ const ITEMS: CardItem[] = [
   },
   {
     id: "card-2",
-    title: "Web Design & Development",
+    title: "Social Media Marketing",
     image:
       "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: (
-      <div className="space-y-4 text-muted-foreground leading-relaxed">
-        <p>
-          Fast, responsive websites built with modern tooling and an eye for
-          detail — designed to look right on day one and hold up as your
-          product evolves.
-        </p>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <strong className="text-foreground">Design to Code:</strong>{" "}
-            Pixel-accurate builds from Figma straight into production-ready
-            components.
-          </li>
-          <li>
-            <strong className="text-foreground">Performance First:</strong>{" "}
-            Optimized loading, accessibility, and Core Web Vitals baked in from
-            the start.
-          </li>
-          <li>
-            <strong className="text-foreground">Built to Extend:</strong>{" "}
-            Clean, componentized code your team can keep building on.
-          </li>
-        </ul>
-        <div className="pt-8">
-          <h4 className="text-foreground font-semibold mb-4 text-lg">
-            Tech we work with
-          </h4>
-          <div className="grid gap-4">
-            <div className="aspect-video bg-muted rounded-lg w-full flex items-center justify-center text-muted-foreground">
-              Frontend Stack
-            </div>
-            <div className="aspect-video bg-muted rounded-lg w-full flex items-center justify-center text-muted-foreground">
-              Performance Benchmarks
-            </div>
-          </div>
-        </div>
+      <div className="space-y-8 text-muted-foreground leading-relaxed">
+        <ServiceHero
+          tagline="Build a Brand People Remember."
+          paragraphs={[
+            "Strategic social media built around your audience, your category and your business goals.",
+            "We create content systems that strengthen brand presence, build trust and keep your audience engaged.",
+          ]}
+          ctaLabel="Build My Social Presence →"
+          ctaHref="/contact"
+        />
+
+        <ServiceSection
+          eyebrow="The Problem"
+          heading="Your Content Needs a Clear Direction."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            In a crowded feed, consistency alone won&apos;t create impact.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Strong social presence comes from the right content pillars,
+            creative formats, messaging and publishing strategy working
+            together.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="What We Do"
+          heading="A Social System Built Around Your Brand."
+        >
+          <WhatWeDoGrid
+            items={[
+              {
+                title: "Content Strategy",
+                description:
+                  "Content pillars and themes designed around your audience, category and positioning.",
+              },
+              {
+                title: "Creative & Production",
+                description:
+                  "Reels, carousels, static creatives and campaigns created for your brand's visual language.",
+              },
+              {
+                title: "Community & Engagement",
+                description:
+                  "Meaningful conversations and interactions that strengthen your relationship with the audience.",
+              },
+              {
+                title: "Growth & Optimisation",
+                description:
+                  "Continuous analysis of content performance to understand what resonates and refine the strategy.",
+              },
+            ]}
+          />
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Our Approach"
+          heading="Strategy → Create → Analyse → Evolve"
+        />
       </div>
     ),
   },
