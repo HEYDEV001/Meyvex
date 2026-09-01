@@ -71,7 +71,7 @@ export default function ContactPage() {
         </div>
       </main>
 
-      <div className="contact-keyboard -mt-10">
+      <div className="contact-keyboard -mt-10 hidden md:block">
         <VintageKeyboard respondWhileTyping />
       </div>
 

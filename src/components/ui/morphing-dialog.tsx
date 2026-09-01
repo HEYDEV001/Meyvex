@@ -37,12 +37,12 @@ export function MorphingDialog() {
   return (
     <div className="w-full">
       <LayoutGroup>
-        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="w-full max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
             {ITEMS.map((item, index) => (
               <motion.button
                 className={`relative group overflow-hidden cursor-pointer bg-muted hover:bg-muted/80 transition-colors w-full h-64 lg:h-80 rounded-2xl focus-visible:outline focus-visible:outline-ring focus-visible:ring-4 focus-visible:ring-ring/10 ${
-                  index === 3 ? "md:col-span-2" : "md:col-span-1"
-                }`}
+                  index === 0 ? "col-span-2 md:col-span-1" : ""
+                } ${index === 3 ? "md:col-span-2" : "md:col-span-1"}`}
                 key={item.id}
                 layoutId={`card-container-${item.id}`}
                 onClick={() => handleOpen(item)}
