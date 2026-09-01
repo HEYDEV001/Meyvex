@@ -655,7 +655,19 @@ const ITEMS: CardItem[] = [
         <ServiceSection
           eyebrow="Why Meyvex"
           heading="Growth Gets More Valuable With Every Customer."
-        />
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            Acquisition brings customers in.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Retention makes each customer worth more.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We connect performance, customer data and retention to create a
+            growth loop where every new customer has the potential to
+            generate more value over time.
+          </p>
+        </ServiceSection>
       </div>
     ),
   },
