@@ -226,7 +226,7 @@ function ServiceSection({
       <p className="inline-block w-fit rounded-full bg-[#FEE762] px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#232323]">
         {eyebrow}
       </p>
-      <h4 className="text-2xl font-bold uppercase text-[#F83F16]">{heading}</h4>
+      <h4 className="text-2xl font-bold uppercase text-black">{heading}</h4>
       {children}
     </div>
   );
@@ -581,44 +581,81 @@ const ITEMS: CardItem[] = [
   },
   {
     id: "card-5",
-    title: "Growth & Marketing",
+    title: "Retention Marketing",
     image:
       "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: (
-      <div className="space-y-4 text-muted-foreground leading-relaxed">
-        <p>
-          Data-informed campaigns designed to turn visibility into real
-          traction — planned and measured, not just launched and hoped for.
-        </p>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <strong className="text-foreground">Campaign Planning:</strong>{" "}
-            Channels and messaging matched to where your audience actually
-            spends time.
-          </li>
-          <li>
-            <strong className="text-foreground">Analytics &amp; Experiments:</strong>{" "}
-            Ongoing testing so spend shifts toward what&apos;s actually working.
-          </li>
-          <li>
-            <strong className="text-foreground">Reporting:</strong>{" "}
-            Clear, regular visibility into what&apos;s driving growth and what
-            isn&apos;t.
-          </li>
-        </ul>
-        <div className="pt-8">
-          <h4 className="text-foreground font-semibold mb-4 text-lg">
-            What we track
-          </h4>
-          <div className="grid gap-4">
-            <div className="aspect-video bg-muted rounded-lg w-full flex items-center justify-center text-muted-foreground">
-              Growth Funnel
-            </div>
-            <div className="aspect-video bg-muted rounded-lg w-full flex items-center justify-center text-muted-foreground">
-              Campaign Performance
-            </div>
-          </div>
-        </div>
+      <div className="space-y-8 text-muted-foreground leading-relaxed">
+        <ServiceHero
+          tagline="Turn First Orders Into Long-Term Customers."
+          paragraphs={[
+            "Retention strategies designed to increase repeat purchases, customer lifetime value and revenue from the customers you already have.",
+            "We use WhatsApp, Email and customer data to create timely, relevant journeys that bring customers back.",
+          ]}
+          ctaLabel="Grow Customer Value →"
+          ctaHref="/contact"
+        />
+
+        <ServiceSection
+          eyebrow="The Problem"
+          heading="The First Purchase Is Only the Beginning."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            You&apos;ve already spent to acquire the customer.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            The next opportunity is turning that purchase into a
+            relationship—and that relationship into repeat revenue.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="What We Do"
+          heading="Build More Reasons to Come Back."
+        >
+          <WhatWeDoGrid
+            items={[
+              {
+                title: "WhatsApp Marketing",
+                description:
+                  "Personalised campaigns and automated journeys that bring customers back at the right moment.",
+              },
+              {
+                title: "Email Marketing",
+                description:
+                  "Lifecycle campaigns designed to educate, engage and drive repeat purchases.",
+              },
+              {
+                title: "Automation & Flows",
+                description:
+                  "Welcome, abandoned cart, post-purchase, win-back and replenishment journeys built around customer behaviour.",
+              },
+              {
+                title: "Customer Segmentation",
+                description:
+                  "Different customers need different messages. We segment audiences to make every communication more relevant.",
+              },
+            ]}
+          />
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Our Approach"
+          heading="Acquire → Understand → Engage → Retain"
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            We use customer behaviour and purchase data to understand when,
+            why and what customers are likely to buy next.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Then we build journeys around those moments.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Why Meyvex"
+          heading="Growth Gets More Valuable With Every Customer."
+        />
       </div>
     ),
   },
