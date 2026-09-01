@@ -128,7 +128,7 @@ export default function RuixenBentoCards({
           </div>
 
           {/* Section Footer Heading */}
-          <div className="max-w-3xl ml-auto text-right px-4 mt-2 lg:-mt-32">
+          <div className="max-w-3xl ml-auto text-right px-4 mt-2 xl:-mt-32">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-white mb-4">
               {heading ?? "Built for performance. Designed for flexibility."}
             </h2>
