@@ -282,9 +282,9 @@ export default function Home() {
 
       <section className="relative mx-auto w-full max-w-3xl px-4 pt-20 pb-6 md:pb-16">
         <h2 className="mb-5 text-center font-medium text-foreground text-xl tracking-tight md:text-3xl">
-          <span className="text-muted-foreground">Trusted by experts.</span>
+          <span className="text-muted-foreground">The Ecosystem of Choice.</span>
           <br />
-          <span className="font-semibold">Used by the leaders.</span>
+          <span className="font-semibold">Powering the Top Brands.</span>
         </h2>
         <div className="mx-auto my-5 h-px max-w-sm bg-border [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
 
@@ -312,10 +312,10 @@ export default function Home() {
       <section className="w-full px-4 pt-20 pb-8 lg:pb-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
-            Results That Speak
+            UNFILTERED SCALE.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg">
-            Real outcomes from real partnerships, drag to explore.
+            Real-time growth metrics from the D2C brands we&rsquo;ve scaled.
           </p>
         </div>
         <div className="relative mt-12 h-50 w-full lg:h-145">
