@@ -130,7 +130,8 @@ export default function FooterSection5() {
                 className="w-9 h-auto shrink-0 mb-2 brightness-0 invert"
               />
               <h2 className="text-white text-xl md:text-[22px] font-medium leading-tight">
-                Ship Tastefully Crafted<br />Marketing Pages
+                One Unified Ecosystem. Infinite Scale. Built for the founders
+                who aim for the world.
               </h2>
             </div>
 
