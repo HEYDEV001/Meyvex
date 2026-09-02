@@ -550,7 +550,7 @@ const ITEMS: CardItem[] = [
             people a reason to buy.
           </p>
           <a
-            className="inline-flex items-center gap-1.5 pt-2 font-semibold text-foreground underline-offset-4 hover:underline"
+            className="inline-flex items-center gap-1.5 mt-2 rounded-full bg-blue-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-blue-700"
             href="/contact"
           >
             Start a Conversation →
@@ -657,7 +657,7 @@ const ITEMS: CardItem[] = [
             want to buy from.
           </p>
           <a
-            className="inline-flex items-center gap-1.5 pt-2 font-semibold text-foreground underline-offset-4 hover:underline"
+            className="inline-flex items-center gap-1.5 mt-2 rounded-full bg-blue-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-blue-700"
             href="/contact"
           >
             Start a Conversation →
@@ -754,6 +754,19 @@ const ITEMS: CardItem[] = [
             growth loop where every new customer has the potential to
             generate more value over time.
           </p>
+        </ServiceSection>
+
+        <ServiceSection eyebrow="Final CTA" heading="Make Every Customer Count.">
+          <p className="text-muted-foreground leading-relaxed">
+            Let&apos;s build a retention engine that turns one-time buyers
+            into repeat customers.
+          </p>
+          <a
+            className="inline-flex items-center gap-1.5 mt-2 rounded-full bg-blue-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-blue-700"
+            href="/contact"
+          >
+            Start a Conversation →
+          </a>
         </ServiceSection>
       </div>
     ),
