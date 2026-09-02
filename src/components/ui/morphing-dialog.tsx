@@ -337,6 +337,18 @@ const ITEMS: CardItem[] = [
           <p className="text-muted-foreground leading-relaxed">
             Your ads are only as strong as the experience behind them.
           </p>
+          <p className="text-muted-foreground leading-relaxed">
+            That&apos;s why our performance team works closely with creative,
+            Shopify and retention—so we&apos;re improving the entire growth
+            journey, not just your ad account.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection eyebrow="Final CTA" heading="Ready to Scale Smarter?">
+          <p className="text-muted-foreground leading-relaxed">
+            Let&apos;s find what&apos;s keeping your brand from its next
+            stage of growth.
+          </p>
         </ServiceSection>
       </div>
     ),
@@ -405,7 +417,41 @@ const ITEMS: CardItem[] = [
         <ServiceSection
           eyebrow="Our Approach"
           heading="Strategy → Create → Analyse → Evolve"
-        />
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            Every month brings new audience insights.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We study what gets attention, what drives engagement and what
+            strengthens brand recall—then use those learnings to shape the
+            next wave of content.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Why Meyvex"
+          heading="Social Built Around the Business."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            Every piece of content has a role in building the brand—from
+            creating attention to shaping perception and driving demand.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Our social, creative and performance teams work together to turn
+            audience insights into content that keeps your brand relevant and
+            your growth moving.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Final CTA"
+          heading="Give Your Brand a Stronger Presence."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            Let&apos;s build a social strategy designed for where your brand
+            wants to go.
+          </p>
+        </ServiceSection>
       </div>
     ),
   },
