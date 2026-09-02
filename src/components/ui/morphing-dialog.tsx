@@ -534,6 +534,27 @@ const ITEMS: CardItem[] = [
             Every UGC video starts with a purpose—attention, trust, education
             or conversion.
           </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Our content and performance teams work together, so the insights
+            from your ads can influence your next creative and your best
+            creatives can fuel your next campaign.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Final CTA"
+          heading="Give Your Brand a Voice People Trust."
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            Let&apos;s create UGC that feels natural to watch—and gives
+            people a reason to buy.
+          </p>
+          <a
+            className="inline-flex items-center gap-1.5 pt-2 font-semibold text-foreground underline-offset-4 hover:underline"
+            href="/contact"
+          >
+            Start a Conversation →
+          </a>
         </ServiceSection>
       </div>
     ),
@@ -621,6 +642,26 @@ const ITEMS: CardItem[] = [
             Your Shopify store sits at the centre of your acquisition,
             conversion and retention efforts.
           </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We connect Shopify, creative, performance and retention to create
+            a storefront that works with the entire growth ecosystem.
+          </p>
+        </ServiceSection>
+
+        <ServiceSection
+          eyebrow="Final CTA"
+          heading="Ready to Build a Better Store?"
+        >
+          <p className="text-muted-foreground leading-relaxed">
+            Let&apos;s turn your storefront into an experience your customers
+            want to buy from.
+          </p>
+          <a
+            className="inline-flex items-center gap-1.5 pt-2 font-semibold text-foreground underline-offset-4 hover:underline"
+            href="/contact"
+          >
+            Start a Conversation →
+          </a>
         </ServiceSection>
       </div>
     ),
