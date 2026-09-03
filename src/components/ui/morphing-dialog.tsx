@@ -260,8 +260,7 @@ const ITEMS: CardItem[] = [
   {
     id: "card-1",
     title: "Performance Marketing",
-    image:
-      "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/service-performance-marketing.jpg",
     content: (
       <div className="space-y-8 text-muted-foreground leading-relaxed">
         <ServiceHero
@@ -356,8 +355,7 @@ const ITEMS: CardItem[] = [
   {
     id: "card-2",
     title: "Social Media Marketing",
-    image:
-      "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/service-social-media-marketing.jpg",
     content: (
       <div className="space-y-8 text-muted-foreground leading-relaxed">
         <ServiceHero
@@ -458,8 +456,7 @@ const ITEMS: CardItem[] = [
   {
     id: "card-3",
     title: "Content Marketing",
-    image:
-      "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/service-content-marketing.jpg",
     content: (
       <div className="space-y-8 text-muted-foreground leading-relaxed">
         <ServiceHero
@@ -562,8 +559,7 @@ const ITEMS: CardItem[] = [
   {
     id: "card-4",
     title: "Shopify Development",
-    image:
-      "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/service-shopify-development.jpg",
     content: (
       <div className="space-y-8 text-muted-foreground leading-relaxed">
         <ServiceHero

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const TO_EMAIL = "hello@meyvex.com";
-const FROM_EMAIL = "Meyvex Website <onboarding@resend.dev>";
+const FROM_EMAIL = "Meyvex Website <hello@meyvex.com>";
 
 export async function POST(request: Request) {
   const { name, email, phone, message } = await request.json();
