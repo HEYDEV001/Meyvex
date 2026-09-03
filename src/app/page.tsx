@@ -353,8 +353,8 @@ export default function Home() {
       <HowItWorks className="mt-8" />
 
       <AnimatedTeamSection
-        title="Our commitment to integrity and innovation"
-        description="At TopOpti, we believe in forging strong partnerships build on integrity and honesty. Our mission is to drive innovation and ensure our clients success through dedicated service and creative solutions."
+        title="THE ARCHITECTS OF SCALE."
+        description="At Meyvex, we are a unified collective of D2C specialists, creators, and growth engineers. We don't just manage brands, we embed ourselves into your mission to turn your vision into India's next category leader."
         members={teamMembers}
       />
 
