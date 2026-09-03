@@ -331,14 +331,12 @@ export default function Home() {
           <div className="relative z-10 flex h-full flex-col items-center justify-between py-12 text-center">
             <div className="px-6">
               <h1 className="text-balance text-4xl font-medium tracking-tight text-foreground sm:text-5xl">
-                Your work,
-                <br />
-                front and centre.
+                PERFORMANCE CREATIVE.
               </h1>
             </div>
             <p className="max-w-md text-balance px-6 text-sm text-muted-foreground">
-              A hero that leads with the images instead of describing them.
-              Swap in your own and the corridor rebuilds around them.
+              Scroll-stopping visuals and viral-ready reels engineered to
+              lower your CAC and scale your brand profitably.
             </p>
           </div>
         </ImageStreamHero>
