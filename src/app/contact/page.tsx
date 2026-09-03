@@ -1,9 +1,6 @@
 import { ContactCard } from "@/components/ui/contact-card";
 import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { ContactForm } from "@/components/ui/contact-form";
 import FooterSection5 from "@/components/ui/footer-section-5";
 import { Component as VintageKeyboard } from "@/components/ui/vintage-keyboard";
 import Link from "next/link";
@@ -46,27 +43,7 @@ export default function ContactPage() {
               },
             ]}
           >
-            <form action="" className="w-full space-y-4">
-              <div className="flex flex-col gap-2">
-                <Label>Name</Label>
-                <Input type="text" placeholder="Your name" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <Label>Email</Label>
-                <Input type="email" placeholder="Your work email" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <Label>Phone</Label>
-                <Input type="phone" placeholder="Your phone number" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <Label>Message</Label>
-                <Textarea placeholder="Tell us a little about your brand and what you're looking to build." />
-              </div>
-              <Button className="w-full" type="button">
-                Let&apos;s Talk →
-              </Button>
-            </form>
+            <ContactForm />
           </ContactCard>
         </div>
       </main>
