@@ -346,7 +346,7 @@ export default function Home() {
 
       <section className="w-full px-4 pt-24 text-center font-sans">
         <h2 className="text-5xl font-bold tracking-tight text-foreground md:text-7xl">
-          How It Works ?
+          THE GROWTH ROADMAP
         </h2>
       </section>
 

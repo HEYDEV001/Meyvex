@@ -149,33 +149,33 @@ export default function HowItWorks({
 }: HowItWorksProps) {
   const defaultFeatures: Step[] = [
     {
-      title: "Create Account",
+      title: "Ecosystem Audit",
       description:
-        "Sign up in minutes. Enter your details and verify your email to get started.",
+        "We analyze your unit economics and current data to identify exactly what is holding back your scale.",
       colorTheme: "orange",
     },
     {
-      title: "Verify Identity",
+      title: "Infrastructure Build",
       description:
-        "Complete your profile verification to ensure secure transactions and compliance.",
+        "We optimize your Shopify storefront for maximum conversion and build the data tracking layer.",
       colorTheme: "blue",
     },
     {
-      title: "Select Plan",
+      title: "Performance Launch",
       description:
-        "Choose from a variety of investment plans tailored to your financial goals.",
+        "We deploy precision-targeted Meta and Google ads designed to lower your CAC and hit high ROAS.",
       colorTheme: "purple",
     },
     {
-      title: "Analyze & Invest",
+      title: "Retention Engine",
       description:
-        "Review returns and make your first investment with confidence.",
+        "We set up automated WhatsApp and Email flows to turn one-time buyers into lifelong brand advocates.",
       colorTheme: "orange",
     },
     {
-      title: "Track Growth",
+      title: "Exponential Scale",
       description:
-        "Monitor your portfolio in real-time and watch your wealth grow over time.",
+        "We aggressively scale budgets and creative strategy to turn your brand into a D2C category leader.",
       colorTheme: "blue",
     },
   ];
