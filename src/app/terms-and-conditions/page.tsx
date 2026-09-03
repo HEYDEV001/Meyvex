@@ -47,6 +47,23 @@ const TERMS_ENTRIES: ChangelogEntry[] = [
       "Proprietary Frameworks: Meyvex retains all rights to its internal data-modeling techniques, strategy frameworks, and proprietary growth processes used during the service.",
     ],
   },
+  {
+    version: "Section 5",
+    title: "Third-Party Platform Disclaimer",
+    description:
+      "Meyvex operates within the infrastructure of third-party platforms (Shopify, Meta, Google). We are not liable for:",
+    items: [
+      "Unexpected downtime or technical bugs on Shopify.",
+      "Ad account suspensions or policy changes initiated by Meta or Google.",
+      "Fluctuations in performance caused by third-party algorithm updates.",
+    ],
+  },
+  {
+    version: "Section 6",
+    title: "Performance & Growth Guarantee",
+    description:
+      "While Meyvex is committed to engineering high-velocity growth, marketing performance is influenced by external factors including market volatility, competition, and product-market fit. We do not offer a 100% guarantee of specific revenue figures or ROAS. Past performance in our portfolio is not a guarantee of future results for new brands.",
+  },
 ];
 
 export default function TermsAndConditionsPage() {

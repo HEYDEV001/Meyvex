@@ -7,43 +7,102 @@ const PRIVACY_ENTRIES: ChangelogEntry[] = [
     version: "Section 1",
     title: "Information We Collect",
     description:
-      "We collect information you provide directly to us, as well as information gathered automatically when you use our services.",
+      "We collect information in two ways: (A) Directly from you when you inquire about our services, and (B) Indirectly through cookies and tracking technologies.",
     items: [
-      "Contact details such as your name, email address, and phone number",
-      "Usage data including pages visited and actions taken on our site",
-      "Device and browser information collected automatically",
+      "Contact Information: Name, email address, phone number, and LinkedIn profile.",
+      "Business Details: Brand name, website URL, monthly revenue, and advertising budget.",
+      "Technical Data: IP address, browser type, and usage patterns on our website.",
     ],
   },
   {
     version: "Section 2",
-    title: "How We Use Your Information",
+    title: "Data We Process for Clients",
     description:
-      "We use the information we collect to provide, maintain, and improve our services, and to communicate with you.",
+      "As a D2C Ecosystem provider, we act as a Data Processor for our clients. In providing Retention Marketing and Performance Marketing services, we may process:",
     items: [
-      "To respond to your inquiries and provide customer support",
-      "To personalize and improve your experience with our services",
-      "To send updates, marketing communications, and important notices",
+      "Customer lists (Emails/Phone numbers) for WhatsApp, SMS, and Email automation.",
+      "Conversion data via Meta Pixel and Google Tag Manager.",
+      "Shopify store data to analyze and improve ROAS and LTV.",
+      "Meyvex does not own this data; we process it strictly under the instructions of our D2C clients.",
     ],
   },
   {
     version: "Section 3",
-    title: "Data Security",
-    description:
-      "We implement reasonable technical and organizational measures designed to protect your information from unauthorized access, alteration, or disclosure.",
+    title: "How We Use Your Information",
+    description: "We use the collected data to:",
     items: [
-      "Access to personal data is restricted to authorized personnel only",
-      "No method of transmission or storage is guaranteed to be 100% secure",
+      "Deliver and optimize our growth services.",
+      "Personalize your experience on our storefront.",
+      "Send project updates, invoices, and marketing communications.",
+      'Analyze website traffic to improve our "Unified" user experience.',
     ],
   },
   {
     version: "Section 4",
-    title: "Your Rights",
+    title: "Data Sharing & Third Parties",
     description:
-      "You have the right to access, correct, or request deletion of your personal information, subject to applicable law.",
+      "Meyvex does not sell or rent your data. We only share information with trusted third-party platforms essential for D2C growth:",
     items: [
-      "You may request a copy of the personal data we hold about you",
-      "You may ask us to correct or delete inaccurate information",
-      "You may opt out of marketing communications at any time",
+      "Advertising Platforms: Meta (Facebook/Instagram), Google, and TikTok.",
+      "E-commerce Infrastructure: Shopify.",
+      "Retention Tools: WhatsApp Business API providers (e.g., Interakt, Wati), Klaviyo, and Omnisend.",
+      "Legal Compliance: When required by Indian law or in response to legal proceedings.",
+    ],
+  },
+  {
+    version: "Section 5",
+    title: "Cookies and Tracking",
+    description:
+      "We use cookies to understand how you interact with the Meyvex ecosystem. You can manage your cookie preferences through your browser settings, though this may affect the functionality of certain sections of our site.",
+  },
+  {
+    version: "Section 6",
+    title: "Data Security",
+    description:
+      "We implement industry-standard security measures, including encryption and secure servers, to protect your data from unauthorized access, alteration, or disclosure. However, no method of transmission over the internet is 100% secure.",
+  },
+  {
+    version: "Section 7",
+    title: "Data Retention",
+    description:
+      "We retain personal information only for as long as necessary to fulfill the purposes outlined in this policy, or as required by Indian financial and corporate laws.",
+  },
+  {
+    version: "Section 8",
+    title: "Your Rights (DPDP Act Compliance)",
+    description: "Under Indian data protection laws, you have the right to:",
+    items: [
+      "Request access to the personal data we hold about you.",
+      "Request correction of inaccurate or incomplete data.",
+      'Request the erasure of your data (the "Right to be Forgotten").',
+      "Withdraw consent for marketing communications at any time.",
+    ],
+  },
+  {
+    version: "Section 9",
+    title: "Grievance Officer",
+    description:
+      "To address any questions, concerns, or grievances regarding your privacy, you may contact our designated Grievance Officer as per the Information Technology Act:",
+    items: [
+      "Attn: Abhishek Kumar",
+      "Designation: Founder & CEO",
+      "Address: 306, HQ CityWalk, Scheme no 54, Vijay Nagar, Indore - 452010 (Madhya Pradesh)",
+      "Email: hello@meyvex.com",
+    ],
+  },
+  {
+    version: "Section 10",
+    title: "Updates to this Policy",
+    description:
+      'Meyvex reserves the right to update this Privacy Policy at any time. Changes will be reflected with a new "Effective Date" at the top of this page. We encourage you to review this policy periodically.',
+  },
+  {
+    version: "Section 11",
+    title: "Corporate Identity",
+    items: [
+      "Entity Name: MEYVEX MEDIA PRIVATE LIMITED",
+      "CIN: U73100MP2026PTC085270",
+      "Registered in: 306, HQ CityWalk, Scheme no 54, Vijay Nagar, Indore - 452010 (Madhya Pradesh)",
     ],
   },
 ];
@@ -66,7 +125,9 @@ export default function PrivacyPolicyPage() {
 
         <Changelog1
           title="Privacy Policy"
-          description="Learn how we collect, use, and protect your personal information."
+          description={
+            'Effective Date: 03th Sep, 2025. Meyvex Media Pvt. Ltd. ("Meyvex," "we," "us," or "our") is committed to protecting the privacy and security of your data. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website or engage with our D2C growth services. In compliance with the Information Technology Act, 2000 and the Digital Personal Data Protection (DPDP) Act, 2023, this policy outlines our data practices.'
+          }
           entries={PRIVACY_ENTRIES}
           className="space-y-10 md:space-y-14"
           entryTitleClassName="text-xl md:text-3xl"
