@@ -1,6 +1,53 @@
 import Link from "next/link";
-import { Changelog1 } from "@/components/ui/changelog-1";
+import { Changelog1, type ChangelogEntry } from "@/components/ui/changelog-1";
 import FooterSection5 from "@/components/ui/footer-section-5";
+
+const TERMS_ENTRIES: ChangelogEntry[] = [
+  {
+    version: "Section 1",
+    title: "The Unified D2C Ecosystem (Services)",
+    description:
+      "Meyvex provides an integrated suite of growth services designed for D2C brands. The scope of work includes:",
+    items: [
+      "Performance Marketing: Scalable paid acquisition strategies on Meta and Google.",
+      "Shopify Development: End-to-end storefront design, development, and CRO.",
+      "Retention Marketing: Lifecycle automation via WhatsApp, Email, and SMS.",
+      "Content Marketing: Strategic brand storytelling and high-performance creative production.",
+      "Social Media Marketing: Organic community management and brand positioning.",
+      "Specific deliverables and timelines will be defined in a signed Statement of Work (SOW) or Service Agreement.",
+    ],
+  },
+  {
+    version: "Section 2",
+    title: "Client Obligations & Access",
+    description:
+      "To ensure the performance of the ecosystem, the Client agrees to:",
+    items: [
+      "Provide timely access to Shopify backends, Meta Business Manager, Google Ads accounts, and other necessary third-party tools.",
+      "Furnish brand assets, high-resolution media, and product information required for execution.",
+      "Approve creative assets and strategy pivots within [Insert Number, e.g., 48] hours to maintain growth momentum.",
+    ],
+  },
+  {
+    version: "Section 3",
+    title: "Financial Terms & GST",
+    items: [
+      "Service Fees: Monthly retainers are billed in advance. Project-based services (e.g., Shopify Dev) require a 50% upfront deposit.",
+      "Advertising Spend: The Client is responsible for paying advertising platforms (Meta, Google, etc.) directly. Meyvex fees are strictly for management and strategy.",
+      "GST: As per Indian law, Goods and Services Tax (GST) at the prevailing rate (currently 18%) will be applicable to all service invoices.",
+      "Late Payments: Invoices unpaid for more than 7 days may result in a pause of all active campaigns and services.",
+    ],
+  },
+  {
+    version: "Section 4",
+    title: "Intellectual Property Rights",
+    items: [
+      "Client Property: All trademarks, logos, and pre-existing content provided by the Client remain their exclusive property.",
+      "Work Product: Upon full payment of all outstanding invoices, Meyvex transfers the ownership of final ad creatives, custom Shopify code, and copy developed specifically for the Client.",
+      "Proprietary Frameworks: Meyvex retains all rights to its internal data-modeling techniques, strategy frameworks, and proprietary growth processes used during the service.",
+    ],
+  },
+];
 
 export default function TermsAndConditionsPage() {
   return (
@@ -20,7 +67,10 @@ export default function TermsAndConditionsPage() {
 
         <Changelog1
           title="Terms & Conditions"
-          description="Please read these terms and conditions carefully before using our services."
+          description={
+            'Last Updated: [Insert Date], 2025. Welcome to Meyvex. These Terms and Conditions ("Terms") govern your access to and use of the website and services provided by [Full Legal Name of your Pvt Ltd Company] ("Meyvex," "the Agency," "we," "us," or "our"), a company incorporated under the Companies Act, 2013, with CIN: [Insert Your CIN Number]. By accessing our website or engaging our services, you (the "Client") agree to be legally bound by these Terms.'
+          }
+          entries={TERMS_ENTRIES}
           entryTitleClassName="text-xl md:text-3xl"
           className="space-y-10 md:space-y-14"
         />

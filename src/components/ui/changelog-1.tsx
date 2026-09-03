@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export type ChangelogEntry = {
   version: string;
   title: string;
-  description: string;
+  description?: string;
   items?: string[];
   button?: {
     url: string;
@@ -112,9 +112,11 @@ export const Changelog1 = ({
                 >
                   {entry.title}
                 </h2>
-                <p className="text-sm text-muted-foreground md:text-base">
-                  {entry.description}
-                </p>
+                {entry.description && (
+                  <p className="text-sm text-muted-foreground md:text-base">
+                    {entry.description}
+                  </p>
+                )}
                 {entry.items && entry.items.length > 0 && (
                   <ul className="mt-4 ml-4 space-y-1.5 text-sm text-muted-foreground md:text-base">
                     {entry.items.map((item, itemIndex) => (
