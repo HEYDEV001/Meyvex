@@ -3,6 +3,7 @@
 import type { DialogRootActions } from "@base-ui/react/dialog";
 import { PlusIcon, X } from "lucide-react";
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { Button } from "@/components/ui/morphing-dialog-utils/button";
 import {
@@ -56,12 +57,12 @@ export function MorphingDialog() {
                   className="absolute inset-0 h-full w-full"
                   layoutId={`image-container-${item.id}`}
                 >
-                  <img
+                  <Image
                     alt={item.title}
-                    className="h-full w-full object-cover dark:brightness-20 dark:grayscale-25"
-                    height={500}
+                    className="object-cover dark:brightness-20 dark:grayscale-25"
+                    fill
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     src={item.image}
-                    width={500}
                   />
                 </motion.div>
                 <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-4 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
@@ -118,15 +119,15 @@ export function MorphingDialog() {
                       >
                         <div className="relative h-64 sm:h-96 w-full shrink-0 overflow-hidden">
                           <motion.div
-                            className="w-full h-full"
+                            className="relative w-full h-full"
                             layoutId={`image-container-${activeItem.id}`}
                           >
-                            <img
+                            <Image
                               alt={activeItem.title}
-                              className="h-full w-full object-cover dark:brightness-20 dark:grayscale-25"
-                              height={500}
+                              className="object-cover dark:brightness-20 dark:grayscale-25"
+                              fill
+                              sizes="(max-width: 768px) 100vw, 896px"
                               src={activeItem.image}
-                              width={500}
                             />
                           </motion.div>
                         </div>

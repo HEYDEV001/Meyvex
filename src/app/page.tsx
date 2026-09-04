@@ -151,22 +151,32 @@ const logos = [
   {
     src: "/client-tact-lifestyle.png",
     alt: "tACT Lifestyle Logo",
+    width: 195,
+    height: 89,
   },
   {
     src: "/client-urja-x.png",
     alt: "Urja-X Logo",
+    width: 150,
+    height: 58,
   },
   {
     src: "/client-sun-breeze.png",
     alt: "Sun Breeze Logo",
+    width: 300,
+    height: 227,
   },
   {
     src: "/client-havit-greens.jpg",
     alt: "Havit Greens Logo",
+    width: 1287,
+    height: 534,
   },
   {
     src: "/client-voyage-academy.png",
     alt: "Voyage Academy Logo",
+    width: 757,
+    height: 329,
   },
 ];
 

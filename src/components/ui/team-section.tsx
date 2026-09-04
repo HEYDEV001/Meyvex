@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils"; // Assuming you have a `cn` utility for classnames
 
@@ -154,10 +155,12 @@ const AnimatedTeamSection = React.forwardRef<
                 transition: { type: "spring", stiffness: 300, damping: 20 },
               }}
             >
-              <img
+              <Image
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover"
+                fill
+                sizes="176px"
+                className="object-cover"
               />
             </motion.button>
           ))}
@@ -212,10 +215,12 @@ const AnimatedTeamSection = React.forwardRef<
               </div>
 
               {/* Background image, full card */}
-              <img
+              <Image
                 src={members[selected].image.replace(/w=\d+/, "w=800")}
                 alt={members[selected].name}
-                className="absolute inset-0 h-full w-full object-cover"
+                fill
+                sizes="33vw"
+                className="object-cover"
               />
             </motion.div>
           </React.Fragment>

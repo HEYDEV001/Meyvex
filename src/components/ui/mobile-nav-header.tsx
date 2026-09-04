@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function MobileNavHeader() {
   return (
     <>
       <Link href="/" className="fixed top-4 left-4 z-50 md:hidden">
-        <img src="/logo.png" alt="Meyvex" className="h-6 w-auto" />
+        <Image src="/logo.png" alt="Meyvex" width={1017} height={245} className="h-6 w-auto" />
       </Link>
 
       <Link

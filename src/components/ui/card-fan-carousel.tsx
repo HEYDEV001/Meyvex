@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { useInView } from "react-intersection-observer";
 
@@ -274,7 +275,7 @@ export default function SocialCards({ cards }: SocialCardsProps) {
           {cards.map((card, index) => {
             const image = (
               <div className="relative w-full h-full overflow-hidden">
-                <img src={card.imgUrl} loading="lazy" alt={card.alt || `Card ${index}`} className="absolute inset-0 w-full h-full object-cover z-10" />
+                <Image src={card.imgUrl} loading="lazy" alt={card.alt || `Card ${index}`} fill sizes="(max-width: 768px) 40vw, 240px" className="object-cover z-10" />
               </div>
             );
             return card.linkUrl ? (

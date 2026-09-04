@@ -1,11 +1,12 @@
+import Image from "next/image";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { cn } from "@/lib/utils";
 
 type Logo = {
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
+  width: number;
+  height: number;
   onDark?: boolean;
 };
 
@@ -29,24 +30,24 @@ export function LogoCloud({ className, logos, ...props }: LogoCloudProps) {
               className="flex items-center rounded-md bg-[#232323] px-3 py-1.5"
               key={`logo-${logo.alt}`}
             >
-              <img
+              <Image
                 alt={logo.alt}
-                className="pointer-events-none h-7 select-none md:h-9"
-                height={logo.height || "auto"}
+                className="pointer-events-none h-7 w-auto select-none md:h-9"
+                height={logo.height}
                 loading="lazy"
                 src={logo.src}
-                width={logo.width || "auto"}
+                width={logo.width}
               />
             </div>
           ) : (
-            <img
+            <Image
               alt={logo.alt}
-              className="pointer-events-none h-7 select-none md:h-9"
-              height={logo.height || "auto"}
+              className="pointer-events-none h-7 w-auto select-none md:h-9"
+              height={logo.height}
               key={`logo-${logo.alt}`}
               loading="lazy"
               src={logo.src}
-              width={logo.width || "auto"}
+              width={logo.width}
             />
           )
         )}

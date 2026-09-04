@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function FluidFlowGrid() {
@@ -125,10 +126,13 @@ export default function FluidFlowGrid() {
             <canvas ref={canvasRef} className="absolute inset-0 block cursor-default" />
 
             <Link href="/" className="absolute top-8 left-8 z-20 hidden md:block">
-                <img
+                <Image
                     src="/logo.png"
                     alt="Meyvex"
+                    width={1017}
+                    height={245}
                     className="h-11 w-auto"
+                    priority
                 />
             </Link>
 

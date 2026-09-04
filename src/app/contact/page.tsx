@@ -3,6 +3,7 @@ import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react";
 import { ContactForm } from "@/components/ui/contact-form";
 import FooterSection5 from "@/components/ui/footer-section-5";
 import { Component as VintageKeyboard } from "@/components/ui/vintage-keyboard";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -10,9 +11,11 @@ export default function ContactPage() {
     <div className="flex flex-col flex-1">
       <main className="relative flex size-full w-full flex-col items-center justify-start gap-10 px-4 pt-32 pb-0">
         <Link href="/" className="absolute top-6 left-6 z-20 md:top-8 md:left-8">
-          <img
+          <Image
             src="/logo.png"
             alt="Meyvex"
+            width={1017}
+            height={245}
             className="h-9 w-auto md:h-11"
           />
         </Link>

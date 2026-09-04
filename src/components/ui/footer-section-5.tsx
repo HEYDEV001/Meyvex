@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { FlutedGlass } from "@paper-design/shaders-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const companyName = "Meyvex";
@@ -124,9 +125,11 @@ export default function FooterSection5() {
           <div className="flex flex-col justify-between max-w-sm w-full">
             <div className="flex flex-col">
               {/* Logo */}
-              <img
+              <Image
                 src="/logo-icon.png"
                 alt="Meyvex"
+                width={213}
+                height={207}
                 className="w-9 h-auto shrink-0 mb-2 brightness-0 invert"
               />
               <h2 className="text-white text-xl md:text-[22px] font-medium leading-tight">
