@@ -665,8 +665,7 @@ const ITEMS: CardItem[] = [
   {
     id: "card-5",
     title: "Retention Marketing",
-    image:
-      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/service-retention-marketing.jpg",
     content: (
       <div className="space-y-8 text-muted-foreground leading-relaxed">
         <ServiceHero
