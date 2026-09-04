@@ -11,27 +11,27 @@ import { CircularGallery } from "@/components/ui/circular-gallery-2";
 
 const resultItems = [
   {
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+    image: "/result-1.jpg",
     text: "2.5x User Growth",
   },
   {
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+    image: "/result-2.jpg",
     text: "40% Faster Launch",
   },
   {
-    image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=800&auto=format&fit=crop",
+    image: "/result-3.jpg",
     text: "3x Revenue Increase",
   },
   {
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
+    image: "/result-4.jpg",
     text: "98% Client Retention",
   },
   {
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
+    image: "/result-1.jpg",
     text: "60% Cost Reduction",
   },
   {
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop",
+    image: "/result-2.jpg",
     text: "12+ Awards Won",
   },
 ];
