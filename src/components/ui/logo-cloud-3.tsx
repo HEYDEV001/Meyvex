@@ -6,6 +6,7 @@ type Logo = {
   alt: string;
   width?: number;
   height?: number;
+  onDark?: boolean;
 };
 
 type LogoCloudProps = React.ComponentProps<"div"> & {
@@ -22,17 +23,33 @@ export function LogoCloud({ className, logos, ...props }: LogoCloudProps) {
       )}
     >
       <InfiniteSlider gap={42} reverse duration={40} durationOnHover={80}>
-        {logos.map((logo) => (
-          <img
-            alt={logo.alt}
-            className="pointer-events-none h-4 select-none md:h-5 dark:brightness-0 dark:invert"
-            height={logo.height || "auto"}
-            key={`logo-${logo.alt}`}
-            loading="lazy"
-            src={logo.src}
-            width={logo.width || "auto"}
-          />
-        ))}
+        {logos.map((logo) =>
+          logo.onDark ? (
+            <div
+              className="flex items-center rounded-md bg-[#232323] px-3 py-1.5"
+              key={`logo-${logo.alt}`}
+            >
+              <img
+                alt={logo.alt}
+                className="pointer-events-none h-7 select-none md:h-9"
+                height={logo.height || "auto"}
+                loading="lazy"
+                src={logo.src}
+                width={logo.width || "auto"}
+              />
+            </div>
+          ) : (
+            <img
+              alt={logo.alt}
+              className="pointer-events-none h-7 select-none md:h-9"
+              height={logo.height || "auto"}
+              key={`logo-${logo.alt}`}
+              loading="lazy"
+              src={logo.src}
+              width={logo.width || "auto"}
+            />
+          )
+        )}
       </InfiniteSlider>
     </div>
   );

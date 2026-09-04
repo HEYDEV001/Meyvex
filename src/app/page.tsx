@@ -149,36 +149,30 @@ const streamImages = [
 
 const logos = [
   {
-    src: "https://svgl.app/library/nvidia-wordmark-light.svg",
-    alt: "Nvidia Logo",
+    src: "/client-tact-lifestyle.jpg",
+    alt: "tACT Lifestyle Logo",
   },
   {
-    src: "https://svgl.app/library/supabase_wordmark_light.svg",
-    alt: "Supabase Logo",
+    src: "/client-urja-x.jpg",
+    alt: "Urja-X Logo",
   },
   {
-    src: "https://svgl.app/library/openai_wordmark_light.svg",
-    alt: "OpenAI Logo",
+    src: "/client-sun-breeze.jpg",
+    alt: "Sun Breeze Logo",
   },
   {
-    src: "https://svgl.app/library/turso-wordmark-light.svg",
-    alt: "Turso Logo",
+    src: "/client-havit-greens.png",
+    alt: "Havit Greens Logo",
+    onDark: true,
   },
   {
-    src: "https://svgl.app/library/vercel_wordmark.svg",
-    alt: "Vercel Logo",
+    src: "/client-voyage-academy.jpg",
+    alt: "Voyage Academy Logo",
   },
   {
-    src: "https://svgl.app/library/github_wordmark_light.svg",
-    alt: "GitHub Logo",
-  },
-  {
-    src: "https://svgl.app/library/claude-ai-wordmark-icon_light.svg",
-    alt: "Claude AI Logo",
-  },
-  {
-    src: "https://svgl.app/library/clerk-wordmark-light.svg",
-    alt: "Clerk Logo",
+    src: "/client-almonds-ai.png",
+    alt: "almonds.ai Logo",
+    onDark: true,
   },
 ];
 
