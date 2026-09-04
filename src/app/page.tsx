@@ -149,30 +149,24 @@ const streamImages = [
 
 const logos = [
   {
-    src: "/client-tact-lifestyle.jpg",
+    src: "/client-tact-lifestyle.png",
     alt: "tACT Lifestyle Logo",
   },
   {
-    src: "/client-urja-x.jpg",
+    src: "/client-urja-x.png",
     alt: "Urja-X Logo",
   },
   {
-    src: "/client-sun-breeze.jpg",
+    src: "/client-sun-breeze.png",
     alt: "Sun Breeze Logo",
   },
   {
-    src: "/client-havit-greens.png",
+    src: "/client-havit-greens.jpg",
     alt: "Havit Greens Logo",
-    onDark: true,
   },
   {
-    src: "/client-voyage-academy.jpg",
+    src: "/client-voyage-academy.png",
     alt: "Voyage Academy Logo",
-  },
-  {
-    src: "/client-almonds-ai.png",
-    alt: "almonds.ai Logo",
-    onDark: true,
   },
 ];
 
