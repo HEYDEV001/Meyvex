@@ -277,9 +277,9 @@ export default function Home() {
 
       <section className="relative mx-auto w-full max-w-3xl px-4 pt-20 pb-6 md:pb-16">
         <h2 className="mb-5 text-center font-medium text-foreground text-xl tracking-tight md:text-3xl">
-          <span className="text-muted-foreground">The Ecosystem of Choice.</span>
+          <span className="text-muted-foreground">The Ecosystem of Choice</span>
           <br />
-          <span className="font-semibold">Powering the Top Brands.</span>
+          <span className="font-semibold">Powering the Top Brands</span>
         </h2>
         <div className="mx-auto my-5 h-px max-w-sm bg-border [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
 
@@ -307,7 +307,7 @@ export default function Home() {
       <section className="w-full px-4 pt-20 pb-8 lg:pb-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
-            UNFILTERED SCALE.
+            UNFILTERED SCALE
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg">
             Real-time growth metrics from the D2C brands we&rsquo;ve scaled.
@@ -325,8 +325,8 @@ export default function Home() {
         >
           <div className="relative z-10 flex h-full flex-col items-center justify-between py-12 text-center">
             <div className="px-6">
-              <h1 className="text-balance text-4xl font-medium tracking-tight text-foreground sm:text-5xl">
-                PERFORMANCE CREATIVE.
+              <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+                PERFORMANCE CREATIVE
               </h1>
             </div>
             <p className="max-w-md text-balance px-6 text-sm text-muted-foreground">
@@ -348,7 +348,7 @@ export default function Home() {
       <HowItWorks className="mt-8" />
 
       <AnimatedTeamSection
-        title="THE ARCHITECTS OF SCALE."
+        title="THE ARCHITECTS OF SCALE"
         description="At Meyvex, we are a unified collective of D2C specialists, creators, and growth engineers. We don't just manage brands, we embed ourselves into your mission to turn your vision into India's next category leader."
         members={teamMembers}
       />
