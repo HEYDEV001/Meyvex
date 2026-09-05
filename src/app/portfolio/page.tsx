@@ -8,14 +8,14 @@ import FooterSection5 from "@/components/ui/footer-section-5";
 import { Gallery, GalleryGrid, GalleryImage } from "@/components/ui/shared-element-gallery";
 
 const PORTFOLIO_IMAGES = [
-  { id: "img-1", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/215f11bd-8f46-486d-8b18-377cf347096f_3840w.webp" },
-  { id: "img-2", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/edaf8dff-6ac4-4fed-b5ff-f41e6863a090_3840w.jpg" },
-  { id: "img-3", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1ab0a4be-b66e-441b-9576-a9d5ac06f8fb_3840w.jpg" },
-  { id: "img-4", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/32ecf28d-1c1d-4769-9096-c1094771e78c_3840w.webp" },
-  { id: "img-5", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1e5d812f-98e8-460c-ab63-780281a96167_3840w.jpg" },
-  { id: "img-6", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5b2eae1d-50c9-4fc6-bc0b-6e04ab1507b1_3840w.webp" },
-  { id: "img-7", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/765e26b6-040b-48cb-96df-db0ea0f7f300_3840w.jpg" },
-  { id: "img-8", src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/00d83233-ec00-4110-bf1d-95338af5875e_3840w.jpg" },
+  { id: "img-1", src: "/portfolio-raksha-bandhan.jpg" },
+  { id: "img-2", src: "/portfolio-urjax-key-nutrients.jpg" },
+  { id: "img-3", src: "/portfolio-urjax-chill-summers.jpg" },
+  { id: "img-4", src: "/portfolio-urjax-lose-weight.jpg" },
+  { id: "img-5", src: "/portfolio-urjax-good-choices.jpg" },
+  { id: "img-6", src: "/portfolio-raksha-bandhan.jpg" },
+  { id: "img-7", src: "/portfolio-urjax-key-nutrients.jpg" },
+  { id: "img-8", src: "/portfolio-urjax-chill-summers.jpg" },
 ];
 
 const PORTFOLIO_REELS = [
