@@ -149,7 +149,7 @@ export default function FluidFlowGrid() {
           {/* // FLUID_VECTOR_STREAM */}
                 </span>
                 <h1 className="font-mono text-6xl md:text-9xl font-black tracking-tighter uppercase leading-none">
-                    UNIFIED
+                    MEYVEX
                 </h1>
                 <p className="mt-4 font-mono text-xs md:text-sm max-w-lg opacity-70">
                     Building India&rsquo;s most powerful D2C growth ecosystem to scale your brand from local to global.
