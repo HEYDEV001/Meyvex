@@ -347,11 +347,11 @@ export default function Home() {
 
       <HowItWorks className="mt-8" />
 
-      <AnimatedTeamSection
+      {/* <AnimatedTeamSection
         title="THE ARCHITECTS OF SCALE"
         description="At Meyvex, we are a unified collective of D2C specialists, creators, and growth engineers. We don't just manage brands, we embed ourselves into your mission to turn your vision into India's next category leader."
         members={teamMembers}
-      />
+      /> */}
 
       <FooterSection5 />
     </div>
