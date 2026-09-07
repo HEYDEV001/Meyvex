@@ -10,13 +10,13 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col flex-1">
       <main className="relative flex size-full w-full flex-col items-center justify-start gap-10 px-4 pt-32 pb-0">
-        <Link href="/" className="absolute top-6 left-6 z-20 md:top-8 md:left-8">
+        <Link href="/" className="absolute top-4 left-4 z-20 md:top-8 md:left-8">
           <Image
             src="/logo.png"
             alt="Meyvex"
             width={1017}
             height={245}
-            className="h-9 w-auto md:h-11"
+            className="h-6 w-auto md:h-11"
           />
         </Link>
 
