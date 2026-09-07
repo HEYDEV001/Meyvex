@@ -240,31 +240,31 @@ const services = [
   {
     id: 1,
     content: <ServiceOne />,
-    className: "row-span-2 md:row-span-1 md:col-span-2",
+    className: "col-span-3 md:col-span-2",
     thumbnail: "/service-performance-marketing.jpg",
   },
   {
     id: 2,
     content: <ServiceTwo />,
-    className: "md:col-span-1",
+    className: "col-span-2 md:col-span-1",
     thumbnail: "/service-social-media-marketing.jpg",
   },
   {
     id: 3,
     content: <ServiceThree />,
-    className: "md:col-span-1",
+    className: "col-span-1 md:col-span-1",
     thumbnail: "/service-content-marketing.jpg",
   },
   {
     id: 4,
     content: <ServiceFour />,
-    className: "md:col-span-1",
+    className: "col-span-1 md:col-span-1",
     thumbnail: "/service-shopify-development.jpg",
   },
   {
     id: 5,
     content: <ServiceFive />,
-    className: "md:col-span-1",
+    className: "col-span-2 md:col-span-1",
     thumbnail: "/service-retention-marketing.jpg",
   },
 ];
